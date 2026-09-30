@@ -36,6 +36,7 @@ plugins/
     ├── main.lua
     ├── txtoutline_recognizer.lua
     ├── txtoutline_adapter.lua
+    ├── txtoutline_charset.lua
     └── txtoutline_cache.lua
 ```
 
@@ -43,13 +44,31 @@ plugins/
 
 菜单入口位于阅读界面的 **更多工具（More tools）→ TXT chapter outline**。切换开关或重新扫描后，插件会无闪烁地重新加载当前 TXT，使配置立即生效。开关是全局设置，对随后打开的其他 TXT 同样生效。
 
+## 编码
+
+国内纯文本小说大多是 GB2312/GBK。插件读完原始字节先按 UTF-8 校验，不通过就交给**系统 ICU**
+（`libicuuc.so`：Android 自带，且列在 `/system/etc/public.libraries.txt` 里，所以 App 可以 dlopen），
+一次 `ucnv_convert("utf-8", "gb18030", …)` 转完。GB18030 覆盖 GB2312 和 GBK 的全部两字节区，
+四字节区也是原生支持，所以不需要内置码表。
+
+实测（EPD106 / Android 8.1 / armv7a / ICU 58）：340 KB 的《珍宝馆》转码 **12 毫秒**，结果与 Python 的
+`gb18030` 编解码器逐字节一致（503525 字节，滚动哈希相同）。ICU 的 C 符号带版本后缀（这台是
+`ucnv_convert_58`，版本号跟着 Android 走），插件运行时探测后缀，不硬编码。
+
+ICU 解不开的字节会被替换成 U+FFFD；替换比例超过文件的 2% 就判定「不是这个编码」并跳过整本。
+猜错编码不会产生错目录：识别出的标题必须能在 crengine 解码后的正文里搜到才算数，所以猜错只会
+**漏**标题，不会指错位置。
+
+UTF-16 仍未支持（带 BOM 或含 NUL 字节即跳过）。ICU 换个转换器名就能加，等真有这种书再说。
+
 ## 安全降级
 
 以下情况插件会跳过，不影响原书正常打开：
 
 - 文件超过 16 MiB；
-- 无法读取或无法可靠解码；
-- UTF-16、GBK/GB18030 等当前未支持编码；
+- 无法读取；
+- UTF-16，或含 NUL 字节的二进制文件；
+- 非 UTF-8，且系统 ICU 不可用（无 FFI、无 ICU、符号后缀认不出），或替换字符超过 2%；
 - 已启用 KOReader 自带的手工目录；
 - 当前 KOReader 版本缺少搜索或 XPointer API；
 - 标题能够识别，但无法映射到文档节点。

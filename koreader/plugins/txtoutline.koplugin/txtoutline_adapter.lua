@@ -36,10 +36,12 @@ Compatibility boundaries (deliberate, see README.md for the rationale):
     stylesheet. If an XPointer cannot be converted safely, that node is not
     styled; it never falls back to a broad `p` or `pre` selector.
   * Encoding: crengine is asked to read the file first. If the raw bytes have to
-    be read by us, only UTF-8 (with or without BOM) is accepted; UTF-16 and
-    legacy CJK code pages such as GB18030 are detected and skipped, with a log
-    line. Guessing would produce search strings that cannot match the rendered
-    text, i.e. a silently wrong TOC.
+    be read by us they are accepted as UTF-8 (with or without BOM), or handed to
+    the system ICU as GB2312/GBK/GB18030 when they are not valid UTF-8 (see
+    charset.lua); UTF-16 is still detected and skipped, with a log line. A wrong
+    guess cannot produce a silently wrong TOC: the recognised titles are matched
+    against crengine's own decoded DOM text further down, so a mis-decoded
+    heading simply fails to map instead of pointing somewhere wrong.
   * Every search/probe call is pcall'ed: a KOReader build without the API makes
     the plugin skip that step instead of breaking the reader.
 --]]--
@@ -47,6 +49,7 @@ Compatibility boundaries (deliberate, see README.md for the rationale):
 local logger = require("logger")
 
 local Recognizer = require("txtoutline_recognizer")
+local Charset = require("txtoutline_charset")
 
 local Adapter = {}
 
@@ -60,8 +63,14 @@ Adapter.DEFAULT_READ_LIMITS = {
     -- well under a second for 47 MB / 400k lines), so this bound exists to cap
     -- peak memory rather than CPU.
     max_bytes = 16 * 1024 * 1024,
-    -- Refuse anything that is not valid UTF-8 (see compatibility notes above).
-    require_utf8 = true,
+    -- Non-UTF-8 bytes are decoded by the system ICU (charset.lua). A file whose
+    -- decode needs more replacement characters than this fraction of its size is
+    -- not treated as that code page at all (wrong guessing, binary data) and is
+    -- skipped like before.
+    max_replacement_ratio = 0.02,
+    -- Converter name for those files. "gb18030" is a superset of GBK and GB2312,
+    -- so one name covers every Chinese TXT seen so far.
+    legacy_cjk_encoding = "gb18030",
 }
 
 Adapter.DEFAULT_SEARCH_OPTIONS = {
@@ -151,9 +160,26 @@ function Adapter.decodeBytes(bytes, limits)
         -- strings, so skip.
         return nil, "nul-byte"
     end
-    if limits.require_utf8 and not Recognizer.isValidUtf8(body) then
-        -- Typical for GB18030/GBK/Big5 TXT files. Safe skip + log.
-        return nil, "not-utf8"
+    if not Recognizer.isValidUtf8(body) then
+        -- Typical for GB2312/GBK/GB18030 TXT files: hand the bytes to the
+        -- system ICU. A mis-decode is safe by construction -- searchTitles()
+        -- only keeps titles that crengine's decoded DOM really contains, so a
+        -- wrong guess drops headings instead of misplacing them.
+        local text, reason, stats = Charset.decode(body, limits.legacy_cjk_encoding)
+        if not text then
+            logger.dbg("txtoutline: legacy CJK decode unavailable:", reason)
+            return nil, "not-utf8"
+        end
+        local replacements = Charset.countReplacements(text)
+        if replacements > #body * limits.max_replacement_ratio then
+            logger.warn("txtoutline: " .. replacements .. " replacement characters in "
+                .. #body .. " bytes, not treating the file as " .. limits.legacy_cjk_encoding)
+            return nil, "not-utf8"
+        end
+        logger.info("txtoutline: decoded " .. #body .. " bytes as " .. limits.legacy_cjk_encoding
+            .. " (" .. (stats and stats.symbol or "?") .. ", " .. replacements
+            .. " replacement characters)")
+        return Recognizer.normalizeNewlines(text), nil
     end
     return Recognizer.normalizeNewlines(body), nil
 end

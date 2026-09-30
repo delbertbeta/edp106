@@ -76,4 +76,25 @@ assert(select(2, css:gsub("border%-left: 0%.18em solid currentColor !important",
 assert(css:find("text%-align: left !important") and css:find("padding%-left: 0%.5em !important"),
     "TXT headings should use the left-bar alignment and padding")
 
+local utf8_text, utf8_reason = Adapter.decodeBytes("珍宝馆")
+assert(utf8_text == "珍宝馆" and utf8_reason == nil, "valid UTF-8 must pass through untouched")
+
+local GBK_ZHENBAOGUAN = "\182\213\228\177\166\185\221" -- 珍宝馆 in GBK
+
+-- Legacy CJK decoding (charset.lua). ICU itself only exists on the device
+-- (Android ships libicuuc.so), so offline these assertions pin the parts that
+-- do not need it: the replacement counter, and the safe skip when the decoder
+-- is unavailable -- which is also what a KOReader build without FFI, or a ROM
+-- without ICU, will hit.
+local Charset = require("txtoutline_charset")
+assert(Charset.countReplacements("abc") == 0, "no replacement characters expected")
+assert(Charset.countReplacements("a\239\191\189b\239\191\189") == 2,
+    "replacement characters should be counted")
+local no_icu, no_icu_reason = Charset.decode(GBK_ZHENBAOGUAN)
+assert(no_icu == nil and type(no_icu_reason) == "string",
+    "decode without ICU must fail with a reason")
+local gbk_text, gbk_reason = Adapter.decodeBytes(GBK_ZHENBAOGUAN)
+assert(gbk_text == nil and gbk_reason == "not-utf8",
+    "a GBK file without ICU must still be skipped, not mangled")
+
 print("txtoutline: all tests passed")

@@ -12,7 +12,7 @@ styletweaks/  Stylesheet（Style tweaks）
 |---|---|
 | `patches/2-zenos-topbar-margins.lua` | 给 ZenOS 的阅读状态栏加边距设置（Zen Settings → Reader → Top/Bottom status bar）。它**故意放在 `zenos.koplugin` 外面**，这样升级 ZenOS 不会把它覆盖掉；ZenOS 改了相关源码结构时它会往日志里报错，而不是静默失效 |
 | `plugins/totalfresh.koplugin/` | 墨水屏全刷。KOReader 自带的 Full refresh rate 在这台机器上不生效——它的 Android launcher 认不出这块屏的控制器，`Screen:refreshFull()` 只做一次普通 blit、不闪。插件自己数翻页，翻到 1/5/10/20 次时通过窗口管理器直接触发 GC16 全刷；刷新波形仍交给系统设置，插件不碰。**依赖这块屏，换设备没意义** |
-| `plugins/txtoutline.koplugin/` | TXT 章节标题识别 → 多级目录，见它自己的 [`README.md`](plugins/txtoutline.koplugin/README.md) |
+| `plugins/txtoutline.koplugin/` | TXT 章节标题识别 → 多级目录；GB2312/GBK/GB18030 自动转码（借系统 ICU，不内置码表），见它自己的 [`README.md`](plugins/txtoutline.koplugin/README.md) |
 | `styletweaks/heading_left_bar.css` | 章节标题左对齐 + 左侧竖线 + 内边距；txtoutline 认出来的标题会套用这个效果 |
 
 ## 安装
