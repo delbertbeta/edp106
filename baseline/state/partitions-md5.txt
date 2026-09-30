@@ -1,0 +1,20 @@
+各分区 md5（改造过程中在设备上读的，需要 root 才拿得到）
+读取时间：2026-09-27
+
+411ffe637dc3ca8972d88cd6bfbe3717  /dev/block/by-name/boot
+478e41755c3b37148359cc96c17d3dd7  /dev/block/by-name/bootloader
+e2eed10537978cf5ad33df857b943a28  /dev/block/by-name/env
+2c7ab85a893283e98c931e9511add182  /dev/block/by-name/dto
+2e7346aaeb3496f538b5723c6ca96e71  /dev/block/by-name/recovery
+2c7ab85a893283e98c931e9511add182  /dev/block/by-name/misc
+2c7ab85a893283e98c931e9511add182  /dev/block/by-name/metadata
+0b395fae390ff7c2d2e9a760d011f7b7  /dev/block/by-name/private
+2c7ab85a893283e98c931e9511add182  /dev/block/by-name/media_data
+d7f32b3c1c9e3c91b08a123231c405b3  /dev/block/by-name/frp
+
+/dev/block/by-name/boot -> /dev/block/mmcblk0p4
+
+注：
+- `dto` / `misc` / `metadata` / `media_data` 四个 md5 相同（`2c7ab85a…`），都是同一块空白分区的内容。
+- `boot` 的 `411ffe63…` 与 `root/backup/zzboot.img`（原厂 boot）一致；社区版 `org_boot.img`
+  的 md5 是 `f25bc72e7ad3246ef0caeb24859dca96`，与本机不同，所以那个文件不能当本机的还原基准。

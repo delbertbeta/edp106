@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Whitelist for the privileged permissions EpdNavBar requests.
+
+  On Android 8.1 a privileged app (/system/priv-app) must list its signature|
+  privileged permissions here, otherwise PackageManager refuses them when
+  ro.control_privapp_permissions=enforce. Install to /system/etc/permissions/.
+-->
+<permissions>
+    <privapp-permissions package="com.delbert.epdnav">
+        <permission name="android.permission.STATUS_BAR_SERVICE" />
+        <permission name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+        <permission name="android.permission.INJECT_EVENTS" />
+    </privapp-permissions>
+</permissions>

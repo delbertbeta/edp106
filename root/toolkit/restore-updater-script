@@ -1,0 +1,5 @@
+ui_print("ZZRESTORE-1: restoring ORIGINAL boot");
+package_extract_file("boot.img", "/dev/block/by-name/boot");
+mount("ext4", "EMMC", "/dev/block/by-name/system", "/system");
+run_program("/system/bin/sh", "-c", "md5sum /dev/block/by-name/boot > /system/zzrestore.txt 2>&1; chmod 644 /system/zzrestore.txt; sync; echo restore-done");
+ui_print("ZZRESTORE-2: done - safe to reboot");

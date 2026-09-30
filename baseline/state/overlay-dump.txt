@@ -1,0 +1,22 @@
+Settings
+  android.auto_generated_rro__:0 {
+    mPackageName.......: android.auto_generated_rro__
+    mUserId............: 0
+    mTargetPackageName.: android
+    mBaseCodePath......: /vendor/overlay/framework-res__auto_generated_rro.apk
+    mState.............: STATE_ENABLED
+    mIsEnabled.........: true
+    mIsStatic..........: true
+  }
+  com.android.systemui.theme.dark:0 {
+    mPackageName.......: com.android.systemui.theme.dark
+    mUserId............: 0
+    mTargetPackageName.: com.android.systemui
+    mBaseCodePath......: /vendor/overlay/SysuiDarkTheme/SysuiDarkThemeOverlay.apk
+    mState.............: STATE_DISABLED
+    mIsEnabled.........: false
+    mIsStatic..........: false
+  }
+Default overlays: 
+PackageInfo cache
+    4 package(s)

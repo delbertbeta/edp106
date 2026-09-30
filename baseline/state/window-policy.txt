@@ -1,0 +1,87 @@
+WINDOW MANAGER POLICY STATE (dumpsys window policy)
+    mSafeMode=false mSystemReady=true mSystemBooted=true
+    mLidState=-1 mLidOpenRotation=-1 mCameraLensCoverState=-1 mHdmiPlugged=false
+    mLastSystemUiFlags=0x370e mResettingSystemUiFlags=0x0 mForceClearedSystemUiFlags=0x0
+    mWakeGestureEnabledSetting=true
+    mSupportAutoRotation=true
+    mUiMode=1 mDockMode=0 mEnableCarDockHomeCapture=true mCarDockRotation=-1 mDeskDockRotation=-1
+    mUserRotationMode=1 mUserRotation=0 mAllowAllRotations=-1
+    mCurrentAppOrientation=-1
+    mCarDockEnablesAccelerometer=true mDeskDockEnablesAccelerometer=true
+    mLidKeyboardAccessibility=0 mLidNavigationAccessibility=0 mLidControlsScreenLock=false
+ mLidControlsSleep=false
+     mLongPressOnBackBehavior=0
+    mShortPressOnPowerBehavior=1 mLongPressOnPowerBehavior=1
+    mDoublePressOnPowerBehavior=0 mTriplePressOnPowerBehavior=0
+    mHasSoftInput=true
+    mAwake=true
+    mScreenOnEarly=true mScreenOnFully=true
+    mKeyguardDrawComplete=true mWindowManagerDrawComplete=true
+    mOrientationSensorEnabled=false
+    mOverscanScreen=(0,0) 758x1024
+    mRestrictedOverscanScreen=(0,0) 758x1024
+    mUnrestrictedScreen=(0,0) 758x1024
+    mRestrictedScreen=(0,0) 758x1024
+    mStableFullscreen=(0,0)-(758,1024)
+    mStable=(0,40)-(758,1024)
+    mSystem=(0,0)-(758,1024)
+    mCur=(0,0)-(758,1024)
+    mContent=(0,0)-(758,1024)
+    mVoiceContent=(0,0)-(758,1024)
+    mDock=(0,0)-(758,1024)
+    mDockLayer=268435456 mStatusBarLayer=181000
+    mShowingDream=false mDreamingLockscreen=false mDreamingSleepToken=null
+    mDismissImeOnBackKeyPressed=false
+    mStatusBar=Window{fd3d3 u0 StatusBar} isStatusBarKeyguard=false
+    mFocusedWindow=Window{6503f8c u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity}
+    mFocusedApp=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}
+    mTopFullscreenOpaqueWindowState=Window{6503f8c u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity}
+    mTopFullscreenOpaqueOrDimmingWindowState=Window{6503f8c u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity}
+    mTopIsFullscreen=true mKeyguardOccluded=false
+ mKeyguardOccludedChanged=false
+ mPendingKeyguardOccluded=false
+    mForceStatusBar=false mForceStatusBarFromKeyguard=false
+    mHomePressed=false
+    mAllowLockscreenWhenOn=false mLockScreenTimeout=300000 mLockScreenTimerActive=false
+    mEndcallBehavior=2 mIncallPowerBehavior=1 mIncallBackBehavior=0 mLongPressOnHomeBehavior=0
+    mLandscapeRotation=1 mSeascapeRotation=3
+    mPortraitRotation=0 mUpsideDownRotation=2
+    mDemoHdmiRotation=1 mDemoHdmiRotationLock=false
+    mUndockedHdmiRotation=-1
+    mKeyMapping.size=0
+    BarController.StatusBar
+      mState=WINDOW_STATE_HIDDEN
+      mTransientBar=TRANSIENT_BAR_NONE
+    PolicyControl.sImmersiveStatusFilter=null
+    PolicyControl.sImmersiveNavigationFilter=null
+    PolicyControl.sImmersivePreconfirmationsFilter=null
+    WakeGestureListener
+      mTriggerRequested=false
+      mSensor=null
+    WindowOrientationListener
+      mEnabled=false
+      mCurrentRotation=0
+      mSensorType=null
+      mSensor=null
+      mRate=2
+    KeyguardServiceDelegate
+      showing=false
+      showingAndNotOccluded=true
+      inputRestricted=false
+      occluded=false
+      secure=true
+      dreaming=false
+      systemIsReady=true
+      deviceHasKeyguard=true
+      enabled=true
+      offReason=3
+      currentUser=-10000
+      bootCompleted=true
+      screenState=2
+      interactiveState=2
+      KeyguardStateMonitor
+        mIsShowing=false
+        mSimSecure=false
+        mInputRestricted=false
+        mTrusted=false
+        mCurrentUserId=0

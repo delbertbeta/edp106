@@ -1,0 +1,6 @@
+/* Left-aligned headings with a Markdown blockquote-style bar. */
+h1, h2, h3, h4, h5, h6, h7, h8, h9 {
+    text-align: left !important;
+    border-left: 0.18em solid currentColor !important;
+    padding-left: 0.5em !important;
+}

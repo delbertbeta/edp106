@@ -1,0 +1,6 @@
+# The build scripts are run from WSL; keep LF in the working tree on Windows too.
+* text=auto eol=lf
+
+# Raw device captures under baseline/state are evidence: store them byte-for-byte,
+# CRLF and all, so they can still be diffed against a freshly pulled dump.
+baseline/state/* -text

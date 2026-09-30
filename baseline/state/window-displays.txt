@@ -1,0 +1,178 @@
+WINDOW MANAGER DISPLAY CONTENTS (dumpsys window displays)
+  Display: mDisplayId=0
+    init=758x1024 212dpi cur=758x1024 app=758x960 rng=758x718-960x920
+    deferred=false mLayoutNeeded=false mTouchExcludeRegion=SkRegion((0,0,758,1024))
+
+  Application tokens in top down Z order:
+    mStackId=1
+    mDeferRemoval=false
+    mFillsParent=true
+    mBounds=[0,0][758,1024]
+      taskId=50
+        mFillsParent=true
+        mBounds=[0,0][758,1024]
+        mdr=false
+        appTokens=[AppWindowToken{c0b040d token=Token{6dfb95e ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}}}, AppWindowToken{939bc7 token=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}}]
+        mTempInsetBounds=[0,0][0,0]
+          Activity #1 AppWindowToken{939bc7 token=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}}
+          windows=[Window{6503f8c u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity}]
+          windowType=2 hidden=false hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=50 appTokens=[AppWindowToken{c0b040d token=Token{6dfb95e ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}}}, AppWindowToken{939bc7 token=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}}] mdr=false}
+           mFillsParent=true mOrientation=-1
+          hiddenRequested=false mClientHidden=false reportedDrawn=true reportedVisible=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}} mContainer=AppWindowToken{939bc7 token=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}} mListener=ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}
+          Activity #0 AppWindowToken{c0b040d token=Token{6dfb95e ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}}}
+          windows=[Window{2350ae9 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity}]
+          windowType=2 hidden=true hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=50 appTokens=[AppWindowToken{c0b040d token=Token{6dfb95e ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}}}, AppWindowToken{939bc7 token=Token{b82c906 ActivityRecord{eef77e1 u0 com.tencent.weread.eink/com.tencent.weread.ReaderFragmentActivity t50}}}] mdr=false}
+           mFillsParent=true mOrientation=1
+          hiddenRequested=true mClientHidden=true reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{6dfb95e ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}} mContainer=AppWindowToken{c0b040d token=Token{6dfb95e ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}}} mListener=ActivityRecord{ad31299 u0 com.tencent.weread.eink/com.tencent.weread.WeReadFragmentActivity t50}}
+      taskId=60
+        mFillsParent=true
+        mBounds=[0,0][758,1024]
+        mdr=false
+        appTokens=[AppWindowToken{7c6ef86 token=Token{a612ab0 ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}}}, AppWindowToken{7825488 token=Token{cc3d82b ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}}}]
+        mTempInsetBounds=[0,0][0,0]
+          Activity #1 AppWindowToken{7825488 token=Token{cc3d82b ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}}}
+          windows=[Window{6ab5191 u0 com.android.settings/com.android.settings.Settings$ManageApplicationsActivity}]
+          windowType=2 hidden=true hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=60 appTokens=[AppWindowToken{7c6ef86 token=Token{a612ab0 ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}}}, AppWindowToken{7825488 token=Token{cc3d82b ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}}}] mdr=false}
+           mFillsParent=true mOrientation=-1
+          hiddenRequested=true mClientHidden=true reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{cc3d82b ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}} mContainer=AppWindowToken{7825488 token=Token{cc3d82b ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}}} mListener=ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}}
+          Activity #0 AppWindowToken{7c6ef86 token=Token{a612ab0 ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}}}
+          windows=[Window{b5bbd6a u0 com.mgs.settings/com.mgs.settings.MgsSettingsActivity}]
+          windowType=2 hidden=true hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=60 appTokens=[AppWindowToken{7c6ef86 token=Token{a612ab0 ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}}}, AppWindowToken{7825488 token=Token{cc3d82b ActivityRecord{e3e687a u0 com.android.settings/.Settings$ManageApplicationsActivity t60}}}] mdr=false}
+           mFillsParent=true mOrientation=1
+          hiddenRequested=true mClientHidden=true reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{a612ab0 ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}} mContainer=AppWindowToken{7c6ef86 token=Token{a612ab0 ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}}} mListener=ActivityRecord{2d0df3 u0 com.mgs.settings/.MgsSettingsActivity t60}}
+      taskId=57
+        mFillsParent=true
+        mBounds=[0,0][758,1024]
+        mdr=false
+        appTokens=[AppWindowToken{baed7f token=Token{367ab08 ActivityRecord{72678ab u0 cn.modificator.launcher/.Launcher t57}}}]
+        mTempInsetBounds=[0,0][0,0]
+          Activity #0 AppWindowToken{baed7f token=Token{367ab08 ActivityRecord{72678ab u0 cn.modificator.launcher/.Launcher t57}}}
+          windows=[Window{72d13fe u0 cn.modificator.launcher/cn.modificator.launcher.Launcher}]
+          windowType=2 hidden=true hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=57 appTokens=[AppWindowToken{baed7f token=Token{367ab08 ActivityRecord{72678ab u0 cn.modificator.launcher/.Launcher t57}}}] mdr=false}
+           mFillsParent=true mOrientation=-1
+          hiddenRequested=true mClientHidden=true reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{367ab08 ActivityRecord{72678ab u0 cn.modificator.launcher/.Launcher t57}} mContainer=AppWindowToken{baed7f token=Token{367ab08 ActivityRecord{72678ab u0 cn.modificator.launcher/.Launcher t57}}} mListener=ActivityRecord{72678ab u0 cn.modificator.launcher/.Launcher t57}}
+    mStackId=0
+    mDeferRemoval=false
+    mFillsParent=true
+    mBounds=[0,0][758,1024]
+      taskId=62
+        mFillsParent=true
+        mBounds=[0,0][758,1024]
+        mdr=false
+        appTokens=[AppWindowToken{75dfb0d token=Token{c5fd45e ActivityRecord{226b999 u0 cn.modificator.launcher/.Launcher t62}}}]
+        mTempInsetBounds=[0,0][0,0]
+          Activity #0 AppWindowToken{75dfb0d token=Token{c5fd45e ActivityRecord{226b999 u0 cn.modificator.launcher/.Launcher t62}}}
+          windows=[Window{3503db1 u0 cn.modificator.launcher/cn.modificator.launcher.Launcher}]
+          windowType=2 hidden=true hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=62 appTokens=[AppWindowToken{75dfb0d token=Token{c5fd45e ActivityRecord{226b999 u0 cn.modificator.launcher/.Launcher t62}}}] mdr=false}
+           mFillsParent=true mOrientation=-1
+          hiddenRequested=true mClientHidden=true reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{c5fd45e ActivityRecord{226b999 u0 cn.modificator.launcher/.Launcher t62}} mContainer=AppWindowToken{75dfb0d token=Token{c5fd45e ActivityRecord{226b999 u0 cn.modificator.launcher/.Launcher t62}}} mListener=ActivityRecord{226b999 u0 cn.modificator.launcher/.Launcher t62}}
+      taskId=49
+        mFillsParent=true
+        mBounds=[0,0][758,1024]
+        mdr=false
+        appTokens=[AppWindowToken{c16805c token=Token{3a8becf ActivityRecord{ac9f32e u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity t49}}}]
+        mTempInsetBounds=[0,0][0,0]
+          Activity #0 AppWindowToken{c16805c token=Token{3a8becf ActivityRecord{ac9f32e u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity t49}}}
+          windows=[Window{10126a7 u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity}]
+          windowType=2 hidden=true hasVisible=true
+          app=true mVoiceInteraction=false
+          task={taskId=49 appTokens=[AppWindowToken{c16805c token=Token{3a8becf ActivityRecord{ac9f32e u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity t49}}}] mdr=false}
+           mFillsParent=false mOrientation=-1
+          hiddenRequested=true mClientHidden=true reportedDrawn=false reportedVisible=false
+          mAppStopped=true
+          mNumInterestingWindows=1 mNumDrawnWindows=1 inPendingTransaction=false allDrawn=true (animator=true)
+          startingData=null removed=false firstWindowDrawn=true mIsExiting=false
+          controller=AppWindowContainerController{ token=Token{3a8becf ActivityRecord{ac9f32e u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity t49}} mContainer=AppWindowToken{c16805c token=Token{3a8becf ActivityRecord{ac9f32e u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity t49}}} mListener=ActivityRecord{ac9f32e u0 com.duokan.einkreader/com.duokan.home.DkHomeActivity t49}}
+
+
+  DimLayerController
+    Task=49
+      dimLayer=shared, animator=null, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850866
+       mStartAlpha=0.6 mTargetAlpha=0.0
+    Task=57
+      dimLayer=shared, animator=WindowStateAnimator{8d12c60 cn.modificator.launcher/cn.modificator.launcher.Launcher}, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850866
+       mStartAlpha=0.6 mTargetAlpha=0.0
+    Stack=0
+      dimLayer=shared, animator=null, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850866
+       mStartAlpha=0.6 mTargetAlpha=0.0
+    Task=60
+      dimLayer=shared, animator=null, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850866
+       mStartAlpha=0.6 mTargetAlpha=0.0
+    Task=50
+      dimLayer=shared, animator=null, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850866
+       mStartAlpha=0.6 mTargetAlpha=0.0
+    Stack=1
+      dimLayer=shared, animator=null, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850866
+       mStartAlpha=0.6 mTargetAlpha=0.0
+    Task=62
+      dimLayer=shared, animator=null, continueDimming=false
+      mDimSurface=Surface(name=DimLayerController/Stack=0) mLayer=21024 mAlpha=0.0
+      mLastBounds=[-189,-256][948,1280] mBounds=[-189,-256][948,1280]
+      Last animation:  mDuration=200 mStartTime=23531515 curTime=24850867
+       mStartAlpha=0.6 mTargetAlpha=0.0
+
+  DockedStackDividerController
+    mLastVisibility=false
+    mMinimizedDock=false
+    mAdjustedForIme=false
+    mAdjustedForDivider=false
+
+  PinnedStackController
+    defaultBounds=[428,765][737,939]
+    movementBounds=[21,61][737,939]
+    mIsImeShowing=false
+    mIsMinimized=false
+    mActions=[]

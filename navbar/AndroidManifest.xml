@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.delbert.epdnav"
+    android:versionCode="1"
+    android:versionName="0.2">
+
+    <uses-sdk android:minSdkVersion="27" android:targetSdkVersion="27" />
+
+    <!-- Signature-level permissions. Granted because this APK is signed with the
+         same key as the device's platform package (`android`): the well-known
+         AOSP `platform` key. See docs/FINDINGS.md. -->
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- android:persistent is only honoured when the package is parsed from the
+         system partition (PackageParser sets FLAG_PERSISTENT only under
+         PARSE_IS_SYSTEM), so it is inert for a /data install and active once
+         install-system.sh has put this APK in /system/priv-app. When active,
+         ActivityManagerService starts this process during boot all by itself,
+         which is how the nav bar comes back after a reboot without depending on
+         a BOOT_COMPLETED broadcast. -->
+    <application
+        android:name=".NavBarApp"
+        android:label="EpdNavBar"
+        android:persistent="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Invisible, self-finishing. Started by BootReceiver so the process is
+             foreground, which is what makes the service start get accepted. -->
+        <activity
+            android:name=".BootActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service
+            android:name=".NavBarService"
+            android:exported="true" />
+
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

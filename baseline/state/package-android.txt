@@ -1,0 +1,3049 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.os.action.CREATE_USER:
+        b8cae8c android/com.android.internal.app.ConfirmUserCreationActivity filter 3f2d5d7
+          Action: "android.os.action.CREATE_USER"
+          Category: "android.intent.category.DEFAULT"
+          mPriority=1000, mHasPartialTypes=false
+      android.intent.action.CHOOSER:
+        45d29d5 android/com.android.internal.app.ChooserActivity filter 2bb668a
+          Action: "android.intent.action.CHOOSER"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.VOICE"
+      android.intent.action.MAIN:
+        e27e5ea android/com.android.internal.app.SystemUserHomeActivity filter ff16156
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.HOME"
+          mPriority=-100, mHasPartialTypes=false
+      com.android.internal.intent.action.REQUEST_SHUTDOWN:
+        c0660db android/com.android.internal.app.ShutdownActivity filter 5bc2918
+          Action: "com.android.internal.intent.action.REQUEST_SHUTDOWN"
+          Category: "android.intent.category.DEFAULT"
+      com.android.internal.intent.action.CHOOSE_ACCESSIBILITY_BUTTON:
+        49c2778 android/com.android.internal.app.AccessibilityButtonChooserActivity filter bc4e4fb
+          Action: "com.android.internal.intent.action.CHOOSE_ACCESSIBILITY_BUTTON"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.REBOOT:
+        c0660db android/com.android.internal.app.ShutdownActivity filter 632ff71
+          Action: "android.intent.action.REBOOT"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Full MIME Types:
+      */*:
+        9538e51 android/com.android.server.updates.CertPinInstallReceiver filter cd60894
+          Action: "android.intent.action.UPDATE_PINS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        19676b6 android/com.android.server.updates.IntentFirewallInstallReceiver filter 436ef3d
+          Action: "android.intent.action.UPDATE_INTENT_FIREWALL"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c002fb7 android/com.android.server.updates.SmsShortCodesInstallReceiver filter e76a332
+          Action: "android.intent.action.UPDATE_SMS_SHORT_CODES"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        9284324 android/com.android.server.updates.ApnDbInstallReceiver filter 8e8e883
+          Action: "com.android.internal.intent.action.UPDATE_APN_DB"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c71be8d android/com.android.server.updates.CarrierProvisioningUrlsInstallReceiver filter a551a00
+          Action: "android.intent.action.UPDATE_CARRIER_PROVISIONING_URLS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        28b4842 android/com.android.server.updates.TzDataInstallReceiver filter 284239
+          Action: "android.intent.action.UPDATE_TZDATA"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        a5e1053 android/com.android.server.updates.CertificateTransparencyLogInstallReceiver filter 667c07e
+          Action: "android.intent.action.UPDATE_CT_LOGS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        6386d90 android/com.android.server.updates.LangIdInstallReceiver filter 64789df
+          Action: "android.intent.action.UPDATE_LANG_ID"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        4c8b689 android/com.android.server.updates.SmartSelectionInstallReceiver filter 9f1d62c
+          Action: "android.intent.action.UPDATE_SMART_SELECTION"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+  Wild MIME Types:
+      *:
+        9538e51 android/com.android.server.updates.CertPinInstallReceiver filter cd60894
+          Action: "android.intent.action.UPDATE_PINS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        19676b6 android/com.android.server.updates.IntentFirewallInstallReceiver filter 436ef3d
+          Action: "android.intent.action.UPDATE_INTENT_FIREWALL"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c002fb7 android/com.android.server.updates.SmsShortCodesInstallReceiver filter e76a332
+          Action: "android.intent.action.UPDATE_SMS_SHORT_CODES"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        9284324 android/com.android.server.updates.ApnDbInstallReceiver filter 8e8e883
+          Action: "com.android.internal.intent.action.UPDATE_APN_DB"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c71be8d android/com.android.server.updates.CarrierProvisioningUrlsInstallReceiver filter a551a00
+          Action: "android.intent.action.UPDATE_CARRIER_PROVISIONING_URLS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        28b4842 android/com.android.server.updates.TzDataInstallReceiver filter 284239
+          Action: "android.intent.action.UPDATE_TZDATA"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        a5e1053 android/com.android.server.updates.CertificateTransparencyLogInstallReceiver filter 667c07e
+          Action: "android.intent.action.UPDATE_CT_LOGS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        6386d90 android/com.android.server.updates.LangIdInstallReceiver filter 64789df
+          Action: "android.intent.action.UPDATE_LANG_ID"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        4c8b689 android/com.android.server.updates.SmartSelectionInstallReceiver filter 9f1d62c
+          Action: "android.intent.action.UPDATE_SMART_SELECTION"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+  Schemes:
+      content:
+        9538e51 android/com.android.server.updates.CertPinInstallReceiver filter cd60894
+          Action: "android.intent.action.UPDATE_PINS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        19676b6 android/com.android.server.updates.IntentFirewallInstallReceiver filter 436ef3d
+          Action: "android.intent.action.UPDATE_INTENT_FIREWALL"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c002fb7 android/com.android.server.updates.SmsShortCodesInstallReceiver filter e76a332
+          Action: "android.intent.action.UPDATE_SMS_SHORT_CODES"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        9284324 android/com.android.server.updates.ApnDbInstallReceiver filter 8e8e883
+          Action: "com.android.internal.intent.action.UPDATE_APN_DB"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        c71be8d android/com.android.server.updates.CarrierProvisioningUrlsInstallReceiver filter a551a00
+          Action: "android.intent.action.UPDATE_CARRIER_PROVISIONING_URLS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        28b4842 android/com.android.server.updates.TzDataInstallReceiver filter 284239
+          Action: "android.intent.action.UPDATE_TZDATA"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        a5e1053 android/com.android.server.updates.CertificateTransparencyLogInstallReceiver filter 667c07e
+          Action: "android.intent.action.UPDATE_CT_LOGS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        6386d90 android/com.android.server.updates.LangIdInstallReceiver filter 64789df
+          Action: "android.intent.action.UPDATE_LANG_ID"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+        4c8b689 android/com.android.server.updates.SmartSelectionInstallReceiver filter 9f1d62c
+          Action: "android.intent.action.UPDATE_SMART_SELECTION"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+  Non-Data Actions:
+      android.intent.action.MASTER_CLEAR:
+        809a68e android/com.android.server.MasterClearReceiver filter d41c8f5
+          Action: "android.intent.action.FACTORY_RESET"
+          Action: "android.intent.action.MASTER_CLEAR"
+          Action: "com.google.android.c2dm.intent.RECEIVE"
+          Category: "android.intent.category.MASTER_CLEAR"
+          mPriority=100, mHasPartialTypes=false
+      com.google.android.c2dm.intent.RECEIVE:
+        809a68e android/com.android.server.MasterClearReceiver filter d41c8f5
+          Action: "android.intent.action.FACTORY_RESET"
+          Action: "android.intent.action.MASTER_CLEAR"
+          Action: "com.google.android.c2dm.intent.RECEIVE"
+          Category: "android.intent.category.MASTER_CLEAR"
+          mPriority=100, mHasPartialTypes=false
+      android.intent.action.BOOT_COMPLETED:
+        caf5eaf android/com.android.server.BootReceiver filter 1bce4e7
+          Action: "android.intent.action.BOOT_COMPLETED"
+          mPriority=1000, mHasPartialTypes=false
+      android.intent.action.FACTORY_RESET:
+        809a68e android/com.android.server.MasterClearReceiver filter d41c8f5
+          Action: "android.intent.action.FACTORY_RESET"
+          Action: "android.intent.action.MASTER_CLEAR"
+          Action: "com.google.android.c2dm.intent.RECEIVE"
+          Category: "android.intent.category.MASTER_CLEAR"
+          mPriority=100, mHasPartialTypes=false
+
+  MIME Typed Actions:
+      android.intent.action.UPDATE_PINS:
+        9538e51 android/com.android.server.updates.CertPinInstallReceiver filter cd60894
+          Action: "android.intent.action.UPDATE_PINS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_SMART_SELECTION:
+        4c8b689 android/com.android.server.updates.SmartSelectionInstallReceiver filter 9f1d62c
+          Action: "android.intent.action.UPDATE_SMART_SELECTION"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      com.android.internal.intent.action.UPDATE_APN_DB:
+        9284324 android/com.android.server.updates.ApnDbInstallReceiver filter 8e8e883
+          Action: "com.android.internal.intent.action.UPDATE_APN_DB"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_CT_LOGS:
+        a5e1053 android/com.android.server.updates.CertificateTransparencyLogInstallReceiver filter 667c07e
+          Action: "android.intent.action.UPDATE_CT_LOGS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_SMS_SHORT_CODES:
+        c002fb7 android/com.android.server.updates.SmsShortCodesInstallReceiver filter e76a332
+          Action: "android.intent.action.UPDATE_SMS_SHORT_CODES"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_TZDATA:
+        28b4842 android/com.android.server.updates.TzDataInstallReceiver filter 284239
+          Action: "android.intent.action.UPDATE_TZDATA"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_INTENT_FIREWALL:
+        19676b6 android/com.android.server.updates.IntentFirewallInstallReceiver filter 436ef3d
+          Action: "android.intent.action.UPDATE_INTENT_FIREWALL"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_CARRIER_PROVISIONING_URLS:
+        c71be8d android/com.android.server.updates.CarrierProvisioningUrlsInstallReceiver filter a551a00
+          Action: "android.intent.action.UPDATE_CARRIER_PROVISIONING_URLS"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+      android.intent.action.UPDATE_LANG_ID:
+        6386d90 android/com.android.server.updates.LangIdInstallReceiver filter 64789df
+          Action: "android.intent.action.UPDATE_LANG_ID"
+          Scheme: "content"
+          Authority: "": -1 WILD
+          Type: "*"
+          mPriority=0, mHasPartialTypes=true
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.backup.TRANSPORT_HOST:
+        fded2bc android/com.android.internal.backup.LocalTransportService filter f0d02a6
+          Action: "android.backup.TRANSPORT_HOST"
+
+Permissions:
+  Permission [android.permission.REAL_GET_TASKS] (f7d3245):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3fd9d9a android.permission.REAL_GET_TASKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_CACHE_FILESYSTEM] (81d36cb):
+    sourcePackage=android
+    uid=1000 gids=[2001] type=1 prot=signature|privileged
+    perm=Permission{7245ea8 android.permission.ACCESS_CACHE_FILESYSTEM}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REMOTE_AUDIO_PLAYBACK] (d43adc1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{907f966 android.permission.REMOTE_AUDIO_PLAYBACK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REGISTER_WINDOW_MANAGER_LISTENERS] (14674a7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2b4bd54 android.permission.REGISTER_WINDOW_MANAGER_LISTENERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INTENT_FILTER_VERIFICATION_AGENT] (b9c64fd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{10a45f2 android.permission.INTENT_FILTER_VERIFICATION_AGENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_INCALL_SERVICE] (ddbb443):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{64a5ac0 android.permission.BIND_INCALL_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PROVIDE_RESOLVER_RANKER_SERVICE] (5cf53f9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{72cf3e android.permission.PROVIDE_RESOLVER_RANKER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_SETTINGS] (3fb519f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|appop|pre23|preinstalled
+    perm=Permission{4da62ec android.permission.WRITE_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_SMS] (9a836b5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{248a14a android.permission.READ_SMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONTROL_KEYGUARD] (34d68bb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{980c1d8 android.permission.CONTROL_KEYGUARD}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_WALLPAPER_INTERNAL] (bf28931):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{8f78816 android.permission.READ_WALLPAPER_INTERNAL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONFIGURE_WIFI_DISPLAY] (3dfd597):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{32c2384 android.permission.CONFIGURE_WIFI_DISPLAY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONFIGURE_DISPLAY_COLOR_MODE] (8b5876d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{fdc0fa2 android.permission.CONFIGURE_DISPLAY_COLOR_MODE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_WIMAX_STATE] (6c23433):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{f09f3f0 android.permission.ACCESS_WIMAX_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_INPUT_CALIBRATION] (b302d69):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{98f83ee android.permission.SET_INPUT_CALIBRATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECOVERY] (461e08f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{db25f1c android.permission.RECOVERY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TEMPORARY_ENABLE_ACCESSIBILITY] (9953725):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6f3f0fa android.permission.TEMPORARY_ENABLE_ACCESSIBILITY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_PROCESS_LIMIT] (4a5f6ab):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{f145108 android.permission.SET_PROCESS_LIMIT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_LOWPAN_CREDENTIAL] (8720a1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{30022c6 android.permission.READ_LOWPAN_CREDENTIAL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FRAME_STATS] (ccb5287):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{12175b4 android.permission.FRAME_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_CALENDAR] (a5425dd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{f4ba552 android.permission.READ_CALENDAR}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BRICK] (f009023):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{d3a3920 android.permission.BRICK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_CALL_LOG] (df242d9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{d5ac49e android.permission.READ_CALL_LOG}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_PRINT_RECOMMENDATION_SERVICE] (7c20b7f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{59c74c android.permission.BIND_PRINT_RECOMMENDATION_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_FINE_LOCATION] (1bb3395):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous|instant
+    perm=Permission{aa8caa android.permission.ACCESS_FINE_LOCATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RESTART_PACKAGES] (4f5e09b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{a020c38 android.permission.RESTART_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.STORAGE_INTERNAL] (de87411):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{57cc976 android.permission.STORAGE_INTERNAL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.USE_CREDENTIALS] (2c7eb77):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{de7b3e4 android.permission.USE_CREDENTIALS}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TABLET_MODE] (acf404d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{8640702 android.permission.TABLET_MODE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NOTIFICATION_DURING_SETUP] (a45c813):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{45e2a50 android.permission.NOTIFICATION_DURING_SETUP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_KEYGUARD_APPWIDGET] (6dc9449):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a8f914e android.permission.BIND_KEYGUARD_APPWIDGET}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_DEVICE_ADMIN] (dbad26f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{5839b7c android.permission.BIND_DEVICE_ADMIN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_AUDIO_SETTINGS] (512c05):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{ed7745a android.permission.MODIFY_AUDIO_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_CHECKIN_PROPERTIES] (ecc268b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{b2cf368 android.permission.ACCESS_CHECKIN_PROPERTIES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.KILL_UID] (ebd8381):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer
+    perm=Permission{b887c26 android.permission.KILL_UID}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SIGNAL_PERSISTENT_PROCESSES] (a54a067):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{591de14 android.permission.SIGNAL_PERSISTENT_PROCESSES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_PRINT_SERVICE] (83dd6bd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{cf034b2 android.permission.BIND_PRINT_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_NOTIFICATION_POLICY] (600dc03):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{eb8c780 android.permission.ACCESS_NOTIFICATION_POLICY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACTIVITY_EMBEDDING] (e7621b9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4a8e9fe android.permission.ACTIVITY_EMBEDDING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_RUNTIME_PERMISSION_PRESENTER_SERVICE] (bab355f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{8a2dbac android.permission.BIND_RUNTIME_PERMISSION_PRESENTER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_AUDIO_ROUTING] (f4e2075):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1a5a80a android.permission.MODIFY_AUDIO_ROUTING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_BLUETOOTH_MAP] (e77c87b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{2380698 android.permission.RECEIVE_BLUETOOTH_MAP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_MOCK_LOCATION] (56d4ef1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{cfe3ad6 android.permission.ACCESS_MOCK_LOCATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_UCE_OPTIONS_SERVICE] (5b07157):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{ef2f444 android.permission.ACCESS_UCE_OPTIONS_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_VR_LISTENER_SERVICE] (476e92d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{77b2e62 android.permission.BIND_VR_LISTENER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_APP_OPS_STATS] (960cbf3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{d4d10b0 android.permission.GET_APP_OPS_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_DATA_ACTIVITY_CHANGE] (d05eb29):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3e1ceae android.permission.RECEIVE_DATA_ACTIVITY_CHANGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ANSWER_PHONE_CALLS] (cb2344f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous|runtime
+    perm=Permission{7ea87dc android.permission.ANSWER_PHONE_CALLS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_WIFI_CREDENTIAL] (46910e5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a0027ba android.permission.READ_WIFI_CREDENTIAL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_DREAM_SERVICE] (207c66b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{d8645c8 android.permission.BIND_DREAM_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_GSERVICES] (c1ed661):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{e790586 android.permission.WRITE_GSERVICES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INSTALL_LOCATION_PROVIDER] (4da5e47):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{b9df674 android.permission.INSTALL_LOCATION_PROVIDER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_ACCOUNTS] (511779d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{b4ff412 android.permission.MANAGE_ACCOUNTS}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONTROL_WIFI_DISPLAY] (55497e3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{7de05e0 android.permission.CONTROL_WIFI_DISPLAY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SYSTEM_ALERT_WINDOW] (a92f099):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|development|appop|pre23|preinstalled
+    perm=Permission{5353f5e android.permission.SYSTEM_ALERT_WINDOW}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INSTANT_APP_FOREGROUND_SERVICE] (1aecf3f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|development|appop|instant
+    perm=Permission{44da00c android.permission.INSTANT_APP_FOREGROUND_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_CARRIER_SERVICES] (118fd55):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{991f36a android.permission.BIND_CARRIER_SERVICES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.START_TASKS_FROM_RECENTS] (94b205b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a3ab0f8 android.permission.START_TASKS_FROM_RECENTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONTROL_LOCATION_UPDATES] (4b919d1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{153dc36 android.permission.CONTROL_LOCATION_UPDATES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_WAP_PUSH] (5916737):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{7e5e4a4 android.permission.RECEIVE_WAP_PUSH}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_TOP_ACTIVITY_INFO] (364820d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{47985c2 android.permission.GET_TOP_ACTIVITY_INFO}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CLEAR_APP_USER_DATA] (48b3fd3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer
+    perm=Permission{ceea710 android.permission.CLEAR_APP_USER_DATA}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PROVIDE_TRUST_AGENT] (ee43209):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a5e3c0e android.permission.PROVIDE_TRUST_AGENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER] (140062f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{17f243c android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INSTALL_PACKAGES] (294e5c5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{2c60b1a android.permission.INSTALL_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_SOUND_TRIGGER] (5d0d64b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4384828 android.permission.MANAGE_SOUND_TRIGGER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SEND_RESPOND_VIA_MESSAGE] (8e31941):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3a9bee6 android.permission.SEND_RESPOND_VIA_MESSAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_FM_RADIO] (3548c27):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{addbed4 android.permission.ACCESS_FM_RADIO}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_VOICE_KEYPHRASES] (c87087d):
+    sourcePackage=android
+    uid=1000 gids=[1005] type=1 prot=signature|privileged
+    perm=Permission{7c2e372 android.permission.MANAGE_VOICE_KEYPHRASES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SHUTDOWN] (b73c3c3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1c1f440 android.permission.SHUTDOWN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_COMPONENT_ENABLED_STATE] (180af79):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9d7c4be android.permission.CHANGE_COMPONENT_ENABLED_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_QUICK_SETTINGS_TILE] (7c4d91f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{5f2146c android.permission.BIND_QUICK_SETTINGS_TILE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_TV_INPUT] (1d3ca35):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{8c76eca android.permission.BIND_TV_INPUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NFC] (ae7e83b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{6220b58 android.permission.NFC}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_PARENTAL_CONTROLS] (a03d4b1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{55ad96 android.permission.MODIFY_PARENTAL_CONTROLS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INTERNAL_SYSTEM_WINDOW] (762cd17):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6588504 android.permission.INTERNAL_SYSTEM_WINDOW}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RETRIEVE_WINDOW_TOKEN] (1500aed):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2b70d22 android.permission.RETRIEVE_WINDOW_TOKEN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_AUTOFILL] (83d23b3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{25aed70 android.permission.BIND_AUTOFILL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NETWORK_SETTINGS] (9af68e9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{edcd96e android.permission.NETWORK_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BODY_SENSORS] (75c480f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{ad9709c android.permission.BODY_SENSORS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_OVERLAY_PACKAGES] (38caaa5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f811e7a android.permission.CHANGE_OVERLAY_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_WALLPAPER] (d9f562b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{95afa88 android.permission.BIND_WALLPAPER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.START_ANY_ACTIVITY] (1424c21):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{ef2a846 android.permission.START_ANY_ACTIVITY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAMERA_SEND_SYSTEM_EVENTS] (8bb2a07):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{6e93734 android.permission.CAMERA_SEND_SYSTEM_EVENTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_PROCESS_STATE_AND_OOM_SCORE] (656895d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{ba102d2 android.permission.GET_PROCESS_STATE_AND_OOM_SCORE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BROADCAST_SMS] (2d65fa3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{17c92a0 android.permission.BROADCAST_SMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CALL_PRIVILEGED] (e775e59):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9687a1e android.permission.CALL_PRIVILEGED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_INTENT_FILTER_VERIFIER] (7e552ff):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c2838cc android.permission.BIND_INTENT_FILTER_VERIFIER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PHONE_NUMBERS] (8368715):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous|instant
+    perm=Permission{b9e1a2a android.permission.READ_PHONE_NUMBERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_APP_TOKENS] (4c6201b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{60615b8 android.permission.MANAGE_APP_TOKENS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_NETWORK_STATE] (f857f91):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{3dbaef6 android.permission.CHANGE_NETWORK_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAPTURE_TV_INPUT] (c1ca2f7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3e2d564 android.permission.CAPTURE_TV_INPUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MASTER_CLEAR] (3f183cd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{18bc482 android.permission.MASTER_CLEAR}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PERSISTENT_ACTIVITY] (cee7793):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{8a9e3d0 android.permission.PERSISTENT_ACTIVITY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_TELECOM_CONNECTION_SERVICE] (69f8fc9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{e35a6ce android.permission.BIND_TELECOM_CONNECTION_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_SYNC_SETTINGS] (6fef9ef):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{8916cfc android.permission.WRITE_SYNC_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_DEBUG_APP] (c085f85):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{28961da android.permission.SET_DEBUG_APP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND] (8eb460b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{3065ce8 android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY] (d746f01):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2bc1a6 android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RESET_SHORTCUT_MANAGER_THROTTLING] (40637e7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{f585f94 android.permission.RESET_SHORTCUT_MANAGER_THROTTLING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RESET_FINGERPRINT_LOCKOUT] (637fa3d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c425232 android.permission.RESET_FINGERPRINT_LOCKOUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_BOOT_COMPLETED] (1f46b83):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{825e100 android.permission.RECEIVE_BOOT_COMPLETED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.LOOP_RADIO] (8aefd39):
+    sourcePackage=android
+    uid=1000 gids=[1030] type=1 prot=signature|privileged
+    perm=Permission{6bf5f7e android.permission.LOOP_RADIO}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GLOBAL_SEARCH_CONTROL] (8083cdf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1880d2c android.permission.GLOBAL_SEARCH_CONTROL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SUBSCRIBED_FEEDS_READ] (6f933f5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{a6df58a android.permission.SUBSCRIBED_FEEDS_READ}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PEERS_MAC_ADDRESS] (45dc7fb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|setup
+    perm=Permission{5fed018 android.permission.PEERS_MAC_ADDRESS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DEVICE_POWER] (b761a71):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1bde056 android.permission.DEVICE_POWER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_MMS] (b6e8d7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{61cd5c4 android.permission.RECEIVE_MMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_SMS] (d00ecad):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{c4fabe2 android.permission.RECEIVE_SMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_TIME_ZONE] (7173b73):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{6f38a30 android.permission.SET_TIME_ZONE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REMOVE_TASKS] (aeca6a9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{140a42e android.permission.REMOVE_TASKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PRINT_SERVICES] (4201bcf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|preinstalled
+    perm=Permission{b3f195c android.permission.READ_PRINT_SERVICES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_SUBSCRIPTION_PLANS] (cc00465):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a36d53a android.permission.MANAGE_SUBSCRIPTION_PLANS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.EXPAND_STATUS_BAR] (32ca5eb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{3526f48 android.permission.EXPAND_STATUS_BAR}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.launcher.permission.UNINSTALL_SHORTCUT] (1b181e1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{32d0b06 com.android.launcher.permission.UNINSTALL_SHORTCUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS] (2db5c7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{fc337f4 android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS] (be35b1d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{afed192 android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PROFILE] (b45e763):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{2d5df60 android.permission.READ_PROFILE}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_VOICE_INTERACTION] (35f8c19):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{b474de android.permission.BIND_VOICE_INTERACTION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BLUETOOTH] (a2596bf):
+    sourcePackage=android
+    uid=1000 gids=[3002] type=1 prot=normal
+    perm=Permission{ca9918c android.permission.BLUETOOTH}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BROADCAST_WAP_PUSH] (cd3d0d5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{98f00ea android.permission.BROADCAST_WAP_PUSH}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_WIFI_MULTICAST_STATE] (326dfdb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{e243a78 android.permission.CHANGE_WIFI_MULTICAST_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DVB_DEVICE] (da551):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{bd441b6 android.permission.DVB_DEVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PERFORM_SIM_ACTIVATION] (e299eb7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{e9e8624 android.permission.PERFORM_SIM_ACTIVATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.alarm.permission.SET_ALARM] (a36458d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{a5ac342 com.android.alarm.permission.SET_ALARM}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAPTURE_AUDIO_HOTWORD] (72f6f53):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4fe090 android.permission.CAPTURE_AUDIO_HOTWORD}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_MEDIA_STORAGE] (7cead89):
+    sourcePackage=android
+    uid=1000 gids=[1023, 1015] type=1 prot=signature|privileged
+    perm=Permission{cd5d18e android.permission.WRITE_MEDIA_STORAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.voicemail.permission.READ_VOICEMAIL] (eb7adaf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f7a75bc com.android.voicemail.permission.READ_VOICEMAIL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_BLOCKED_NUMBERS] (26b9945):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{e1789a android.permission.WRITE_BLOCKED_NUMBERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_ANIMATION_SCALE] (3db75cb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{85731a8 android.permission.SET_ANIMATION_SCALE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_TASKS] (e3184c1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{fce8466 android.permission.GET_TASKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_CACHE_QUOTA_SERVICE] (429a3a7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{fc1c054 android.permission.BIND_CACHE_QUOTA_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BROADCAST_NETWORK_PRIVILEGED] (310abfd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{52e80f2 android.permission.BROADCAST_NETWORK_PRIVILEGED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_SURFACE_FLINGER] (d42d343):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{aa48dc0 android.permission.ACCESS_SURFACE_FLINGER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SUBSCRIBED_FEEDS_WRITE] (dc10af9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{21fba3e android.permission.SUBSCRIBED_FEEDS_WRITE}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.AUTHENTICATE_ACCOUNTS] (c35609f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{24c5ec android.permission.AUTHENTICATE_ACCOUNTS}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INTERNET] (47e5db5):
+    sourcePackage=android
+    uid=1000 gids=[3003] type=1 prot=normal|instant
+    perm=Permission{9593c4a android.permission.INTERNET}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_RESOLVER_RANKER_SERVICE] (69967bb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{28e54d8 android.permission.BIND_RESOLVER_RANKER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TV_INPUT_HARDWARE] (b842031):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{ff6d316 android.permission.TV_INPUT_HARDWARE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TRANSMIT_IR] (96cc497):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{affe684 android.permission.TRANSMIT_IR}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RETRIEVE_WINDOW_CONTENT] (5498e6d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f050aa2 android.permission.RETRIEVE_WINDOW_CONTENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REORDER_TASKS] (9af1333):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{3d6e6f0 android.permission.REORDER_TASKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_BROADCAST_RADIO] (a7da469):
+    sourcePackage=android
+    uid=1000 gids=[1013] type=1 prot=signature|privileged
+    perm=Permission{1cd2eee android.permission.ACCESS_BROADCAST_RADIO}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.browser.permission.READ_HISTORY_BOOKMARKS] (2bdaf8f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{ddb821c com.android.browser.permission.READ_HISTORY_BOOKMARKS}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_INTENT_SENDER_INTENT] (5c31e25):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{ce14bfa android.permission.GET_INTENT_SENDER_INTENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND] (e6fb5ab):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{c2ca408 android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BLUETOOTH_ADMIN] (f2c77a1):
+    sourcePackage=android
+    uid=1000 gids=[3001] type=1 prot=normal
+    perm=Permission{9e82dc6 android.permission.BLUETOOTH_ADMIN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONTROL_VPN] (2f20187):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{2ebf8b4 android.permission.CONTROL_VPN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.UPDATE_DEVICE_STATS] (377ecdd):
+    sourcePackage=android
+    uid=1000 gids=[3007] type=1 prot=signature|privileged
+    perm=Permission{4296052 android.permission.UPDATE_DEVICE_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BLUETOOTH_STACK] (2632f23):
+    sourcePackage=android
+    uid=1000 gids=[1002, 3010, 3011] type=1 prot=signature
+    perm=Permission{4a9ec20 android.permission.BLUETOOTH_STACK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BLUETOOTH_MAP] (30b79d9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1d92f9e android.permission.BLUETOOTH_MAP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PRECISE_PHONE_STATE] (82f9a7f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a91aa4c android.permission.READ_PRECISE_PHONE_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_FINGERPRINT] (4b0da95):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{624a7aa android.permission.MANAGE_FINGERPRINT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NET_ADMIN] (2d5f9b):
+    sourcePackage=android
+    uid=1000 gids=[3005] type=1 prot=signature
+    perm=Permission{3551f38 android.permission.NET_ADMIN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RESTRICTED_VR_ACCESS] (8118b11):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|preinstalled
+    perm=Permission{7fd9476 android.permission.RESTRICTED_VR_ACCESS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CARRIER_FILTER_SMS] (3785a77):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4d8f6e4 android.permission.CARRIER_FILTER_SMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PERFORM_CDMA_PROVISIONING] (3f2c74d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9a68202 android.permission.PERFORM_CDMA_PROVISIONING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_CONNECTION_SERVICE] (70e2713):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{ca09d50 android.permission.BIND_CONNECTION_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_EXTERNAL_STORAGE] (c318b49):
+    sourcePackage=android
+    uid=1000 gids=null type=1 prot=dangerous
+    perm=Permission{cfebc4e android.permission.READ_EXTERNAL_STORAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+    enforced=null
+  Permission [android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS] (82a216f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer|verifier
+    perm=Permission{afa3e7c android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_SOCIAL_STREAM] (b7e9305):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{8e4f5a android.permission.WRITE_SOCIAL_STREAM}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_INSTANT_APPS] (261658b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer|verifier
+    perm=Permission{4eac668 android.permission.ACCESS_INSTANT_APPS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.LAUNCH_TRUST_AGENT_SETTINGS] (cda5a81):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1520726 android.permission.LAUNCH_TRUST_AGENT_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REGISTER_CALL_PROVIDER] (b7ecf67):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{8d9e114 android.permission.REGISTER_CALL_PROVIDER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_PACKAGE_SIZE] (d11dbd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{d476fb2 android.permission.GET_PACKAGE_SIZE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_THEME_OVERLAY] (11efb03):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1fdfa80 android.permission.MODIFY_THEME_OVERLAY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CLEAR_APP_GRANTED_URI_PERMISSIONS] (a76d8b9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2b8d4fe android.permission.CLEAR_APP_GRANTED_URI_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_VPN_SERVICE] (40c445f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6883eac android.permission.BIND_VPN_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TRUST_LISTENER] (234775):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{849430a android.permission.TRUST_LISTENER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCOUNT_MANAGER] (d5ac77b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c909998 android.permission.ACCOUNT_MANAGER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_USB] (bede5f1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9c085d6 android.permission.MANAGE_USB}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ALLOCATE_AGGRESSIVE] (9446057):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1c1b744 android.permission.ALLOCATE_AGGRESSIVE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INTERACT_ACROSS_USERS_FULL] (7e9f02d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer
+    perm=Permission{5972962 android.permission.INTERACT_ACROSS_USERS_FULL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_ACCESSIBILITY_VOLUME] (3c4aaf3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1c503b0 android.permission.CHANGE_ACCESSIBILITY_VOLUME}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_APPWIDGET] (2226229):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{74279ae android.permission.BIND_APPWIDGET}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.STOP_APP_SWITCHES] (2f5034f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{76eaadc android.permission.STOP_APP_SWITCHES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_MEDIA_RESOURCE_USAGE] (455f7e5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a4082ba android.permission.RECEIVE_MEDIA_RESOURCE_USAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BATTERY_STATS] (b28856b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{4a998c8 android.permission.BATTERY_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PACKAGE_USAGE_STATS] (b732d61):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development|appop
+    perm=Permission{1e41086 android.permission.PACKAGE_USAGE_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_PROFILE] (8c80d47):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{d237974 android.permission.WRITE_PROFILE}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MOUNT_UNMOUNT_FILESYSTEMS] (ad43e9d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1e0af12 android.permission.MOUNT_UNMOUNT_FILESYSTEMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_ACCOUNTS_PRIVILEGED] (bee36e3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{fb8b8e0 android.permission.GET_ACCOUNTS_PRIVILEGED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PRINT_SERVICE_RECOMMENDATIONS] (73b2799):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|preinstalled
+    perm=Permission{396aa5e android.permission.READ_PRINT_SERVICE_RECOMMENDATIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TETHER_PRIVILEGED] (1c35e3f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{aa0830c android.permission.TETHER_PRIVILEGED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_SECURE_SETTINGS] (58da455):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{41f0e6a android.permission.WRITE_SECURE_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SERIAL_PORT] (7999f5b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{658c3f8 android.permission.SERIAL_PORT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_NOTIFICATION_LISTENER_SERVICE] (95130d1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{717a736 android.permission.BIND_NOTIFICATION_LISTENER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_SCREENING_SERVICE] (3c8d637):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{35227a4 android.permission.BIND_SCREENING_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAPTURE_AUDIO_OUTPUT] (ee7090d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a2f00c2 android.permission.CAPTURE_AUDIO_OUTPUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_MIDI_DEVICE_SERVICE] (4a9ed3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{65c1a10 android.permission.BIND_MIDI_DEVICE_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_COARSE_LOCATION] (d882909):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous|instant
+    perm=Permission{570670e android.permission.ACCESS_COARSE_LOCATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS] (316552f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{fd0c73c com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MOVE_PACKAGE] (d014cc5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{44fe61a android.permission.MOVE_PACKAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_ACTIVITY_WATCHER] (3d154b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{9811b28 android.permission.SET_ACTIVITY_WATCHER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_BLOCKED_NUMBERS] (b2ef041):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{37649e6 android.permission.READ_BLOCKED_NUMBERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.STATUS_BAR_SERVICE] (1c5bb27):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{760c1d4 android.permission.STATUS_BAR_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_SEARCH_INDEXABLES] (d394f7d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f4d1e72 android.permission.READ_SEARCH_INDEXABLES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PHONE_STATE] (148e2c3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{6f22740 android.permission.READ_PHONE_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NFC_HANDOVER_STATUS] (8906679):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f4aafbe android.permission.NFC_HANDOVER_STATUS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SCORE_NETWORKS] (f4ce81f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{972776c android.permission.SCORE_NETWORKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DIAGNOSTIC] (fa7f135):
+    sourcePackage=android
+    uid=1000 gids=[1004, 2002] type=1 prot=signature
+    perm=Permission{9fe09ca android.permission.DIAGNOSTIC}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_LOCATION_EXTRA_COMMANDS] (461e73b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{4c59e58 android.permission.ACCESS_LOCATION_EXTRA_COMMANDS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_WIFI_CREDENTIAL_CHANGE] (e736bb1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{ddaf896 android.permission.RECEIVE_WIFI_CREDENTIAL_CHANGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_PRIVILEGED_PHONE_STATE] (7fdbc17):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{7224804 android.permission.READ_PRIVILEGED_PHONE_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.UPDATE_LOCK_TASK_PACKAGES] (2a211ed):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|setup
+    perm=Permission{ac60822 android.permission.UPDATE_LOCK_TASK_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_IMS_CALL_SERVICE] (91802b3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{97de070 android.permission.ACCESS_IMS_CALL_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TRIGGER_TIME_ZONE_RULES_CHECK] (b9adfe9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{860846e android.permission.TRIGGER_TIME_ZONE_RULES_CHECK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SEND_SMS] (486170f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{cb8939c android.permission.SEND_SMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BROADCAST_STICKY] (e3891a5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{514797a android.permission.BROADCAST_STICKY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ASEC_ACCESS] (517152b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{d894d88 android.permission.ASEC_ACCESS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_REMOTE_DISPLAY] (845a321):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{9e0b346 android.permission.BIND_REMOTE_DISPLAY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BLUETOOTH_PRIVILEGED] (96fd907):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{b29ba34 android.permission.BLUETOOTH_PRIVILEGED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NETWORK_STACK] (fb8505d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{ee4bdd2 android.permission.NETWORK_STACK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_ALWAYS_FINISH] (ba6fea3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{cc245a0 android.permission.SET_ALWAYS_FINISH}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CALL_PHONE] (9ae9559):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{cace51e android.permission.CALL_PHONE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.HARDWARE_TEST] (6a0e1ff):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1961bcc android.permission.HARDWARE_TEST}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ASEC_CREATE] (52a2e15):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{63e352a android.permission.ASEC_CREATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_SMS] (52b9f1b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{7ef28b8 android.permission.WRITE_SMS}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME] (58c9691):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{7e279f6 android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE] (6db11f7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6ca1864 android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_AUTOFILL_SERVICE] (8d30acd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6b43f82 android.permission.BIND_AUTOFILL_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_CONTACTS] (6a4d693):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{64256d0 android.permission.WRITE_CONTACTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_KEYGUARD_SECURE_STORAGE] (59286c9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{cead1ce android.permission.ACCESS_KEYGUARD_SECURE_STORAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_JOB_SERVICE] (f3c48ef):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2be0ffc android.permission.BIND_JOB_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONFIRM_FULL_BACKUP] (cb3c685):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{ee63cda android.permission.CONFIRM_FULL_BACKUP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAPTURE_SECURE_VIDEO_OUTPUT] (92e850b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{6da2fe8 android.permission.CAPTURE_SECURE_VIDEO_OUTPUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_TIME] (aef4601):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4fb4ca6 android.permission.SET_TIME}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_APN_SETTINGS] (ebe66e7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{8166294 android.permission.WRITE_APN_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_WIFI_STATE] (609413d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{5ff8d32 android.permission.CHANGE_WIFI_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_COMPANION_DEVICE_MANAGER_SERVICE] (1808a83):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2411400 android.permission.BIND_COMPANION_DEVICE_MANAGER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_PACKAGE_VERIFIER] (1cdb439):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{e954a7e android.permission.BIND_PACKAGE_VERIFIER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_INSTALL_SESSIONS] (db74bdf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{da3702c android.permission.READ_INSTALL_SESSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_CELL_BROADCASTS] (8cc5af5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{137908a android.permission.MODIFY_CELL_BROADCASTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_DAY_NIGHT_MODE] (76ec6fb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{bed6318 android.permission.MODIFY_DAY_NIGHT_MODE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_ROUTE_PROVIDER] (4d4b171):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{b062b56 android.permission.BIND_ROUTE_PROVIDER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_STK_COMMANDS] (d58d7d7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{7e198c4 android.permission.RECEIVE_STK_COMMANDS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_PASSWORD] (331f3ad):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{951a6e2 android.permission.GET_PASSWORD}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_CARRIER_MESSAGING_SERVICE] (d691a73):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3c17d30 android.permission.BIND_CARRIER_MESSAGING_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PACKAGE_VERIFICATION_AGENT] (a71da9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{be74f2e android.permission.PACKAGE_VERIFICATION_AGENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_ORIENTATION] (730eacf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2793c5c android.permission.SET_ORIENTATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REVOKE_RUNTIME_PERMISSIONS] (92aeb65):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer|verifier
+    perm=Permission{1d303a android.permission.REVOKE_RUNTIME_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_VISUAL_VOICEMAIL_SERVICE] (7fb64eb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{78bc248 android.permission.BIND_VISUAL_VOICEMAIL_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_USERS] (763d8e1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9e1606 android.permission.MANAGE_USERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_PREFERRED_APPLICATIONS] (ca964c7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|verifier
+    perm=Permission{9bebaf4 android.permission.SET_PREFERRED_APPLICATIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_TV_REMOTE_SERVICE] (fe4221d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{5f58c92 android.permission.BIND_TV_REMOTE_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FLASHLIGHT] (54d8663):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{4869260 android.permission.FLASHLIGHT}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DELETE_CACHE_FILES] (425c319):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3dbdfde android.permission.DELETE_CACHE_FILES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_WALLPAPER_COMPONENT] (68825bf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{432748c android.permission.SET_WALLPAPER_COMPONENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_UCE_PRESENCE_SERVICE] (94677d5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f421bea android.permission.ACCESS_UCE_PRESENCE_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_NETWORK_STATE] (4a35edb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal|instant
+    perm=Permission{8d84d78 android.permission.ACCESS_NETWORK_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_CONDITION_PROVIDER_SERVICE] (e83bc51):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{91e0cb6 android.permission.BIND_CONDITION_PROVIDER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_DISPLAY_OFFSET] (46f0db7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{c00c924 android.permission.SET_DISPLAY_OFFSET}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_MTP] (f76cc8d):
+    sourcePackage=android
+    uid=1000 gids=[1024] type=1 prot=signature|privileged
+    perm=Permission{9f63e42 android.permission.ACCESS_MTP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DISABLE_KEYGUARD] (ddcce53):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{5135390 android.permission.DISABLE_KEYGUARD}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BACKUP] (e10a489):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a2dfc8e android.permission.BACKUP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAMERA] (c5bfcaf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous|instant
+    perm=Permission{88218bc android.permission.CAMERA}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_CONFIGURATION] (560045):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{311539a android.permission.CHANGE_CONFIGURATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.USER_ACTIVITY] (8f5b4cb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{db604a8 android.permission.USER_ACTIVITY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.LOCAL_MAC_ADDRESS] (ddb5bc1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4a10f66 android.permission.LOCAL_MAC_ADDRESS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_LOGS] (a28d2a7):
+    sourcePackage=android
+    uid=1000 gids=[1007] type=1 prot=signature|privileged|development
+    perm=Permission{7bac354 android.permission.READ_LOGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.COPY_PROTECTED_DATA] (900f2fd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c1ebbf2 android.permission.COPY_PROTECTED_DATA}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ASEC_DESTROY] (585f243):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{caac0c0 android.permission.ASEC_DESTROY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INTERACT_ACROSS_USERS] (feec1f9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{758a53e android.permission.INTERACT_ACROSS_USERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_WALLPAPER] (f0b6f9f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{7db28ec android.permission.SET_WALLPAPER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ASEC_RENAME] (15084b5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{b5d74a android.permission.ASEC_RENAME}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_KEYBOARD_LAYOUT] (24166bb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2c7e7d8 android.permission.SET_KEYBOARD_LAYOUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.USE_DATA_IN_BACKGROUND] (d1b731):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{21e16 android.permission.USE_DATA_IN_BACKGROUND}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_CALENDAR] (115b397):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{bfa984 android.permission.WRITE_CALENDAR}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.UPDATE_CONFIG] (759956d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{bfa05a2 android.permission.UPDATE_CONFIG}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_NETWORK_CONDITIONS] (477f233):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{94fd9f0 android.permission.ACCESS_NETWORK_CONDITIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_CALL_LOG] (b071b69):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{896d9ee android.permission.WRITE_CALL_LOG}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_NOTIFICATION_ASSISTANT_SERVICE] (ab57e8f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{d70a51c android.permission.BIND_NOTIFICATION_ASSISTANT_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_DREAM_STATE] (aed0525):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{e1aa6fa android.permission.READ_DREAM_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.QUERY_DO_NOT_ASK_CREDENTIALS_ON_BOOT] (f9574ab):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{370f708 android.permission.QUERY_DO_NOT_ASK_CREDENTIALS_ON_BOOT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.UPDATE_LOCK] (a8dcea1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4dc38c6 android.permission.UPDATE_LOCK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_LOWPAN_STATE] (a34b087):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{5a27bb4 android.permission.ACCESS_LOWPAN_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_NETWORK_USAGE_HISTORY] (917b3dd):
+    sourcePackage=android
+    uid=1000 gids=[3006] type=1 prot=signature|privileged
+    perm=Permission{1d31b52 android.permission.READ_NETWORK_USAGE_HISTORY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_DRM_CERTIFICATES] (ca1ce23):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{fc59f20 android.permission.ACCESS_DRM_CERTIFICATES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.TV_VIRTUAL_REMOTE_CONTROLLER] (60b0d9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{fe39a9e android.permission.TV_VIRTUAL_REMOTE_CONTROLLER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_APP_OPS_RESTRICTIONS] (139297f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer
+    perm=Permission{7358d4c android.permission.MANAGE_APP_OPS_RESTRICTIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_INPUT_STATE] (7a28195):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{1eac2aa android.permission.READ_INPUT_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_LOWPAN_INTERFACES] (1c0de9b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9d43238 android.permission.MANAGE_LOWPAN_INTERFACES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.KILL_BACKGROUND_PROCESSES] (5f6a211):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{98a5f76 android.permission.KILL_BACKGROUND_PROCESSES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_USER_OEM_UNLOCK_STATE] (444c977):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{fb639e4 android.permission.MANAGE_USER_OEM_UNLOCK_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CACHE_CONTENT] (924e4d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{eb4fd02 android.permission.CACHE_CONTENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.USE_FINGERPRINT] (9b28613):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{b8f1050 android.permission.USE_FINGERPRINT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REQUEST_NETWORK_SCORES] (c28249):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|setup
+    perm=Permission{3f9e74e android.permission.REQUEST_NETWORK_SCORES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_VOICE_INTERACTION_SERVICE] (a35706f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{5dce17c android.permission.ACCESS_VOICE_INTERACTION_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_PRINT_SPOOLER_SERVICE] (da7fa05):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{3912a5a android.permission.BIND_PRINT_SPOOLER_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_DIRECTORY_SEARCH] (b52a48b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{ed49968 android.permission.BIND_DIRECTORY_SEARCH}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS] (5b33181):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1279226 android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.USE_SIP] (bc4fe67):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{30de414 android.permission.USE_SIP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_HDMI_CEC_ACTIVE_SOURCE] (3e064bd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{c6aaab2 android.permission.CHANGE_HDMI_CEC_ACTIVE_SOURCE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_USER_DICTIONARY] (1191a03):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{eef2d80 android.permission.WRITE_USER_DICTIONARY}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REGISTER_SIM_SUBSCRIPTION] (cb38fb9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{54bffe android.permission.REGISTER_SIM_SUBSCRIPTION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_SYNC_STATS] (309535f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{cd9a1ac android.permission.READ_SYNC_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_OWN_CALLS] (ef46e75):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{b38de0a android.permission.MANAGE_OWN_CALLS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_DREAM_STATE] (99c67b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a152c98 android.permission.WRITE_DREAM_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FREEZE_SCREEN] (42a7cf1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{b8ed0d6 android.permission.FREEZE_SCREEN}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_VR_STATE] (af44f57):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|preinstalled
+    perm=Permission{e7c7a44 android.permission.ACCESS_VR_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NOTIFY_TV_INPUTS] (cd8f72d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{d7f2462 android.permission.NOTIFY_TV_INPUTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REBOOT] (20489f3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{2e8f6b0 android.permission.REBOOT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DISPATCH_NFC_MESSAGE] (47ad929):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{52f24ae android.permission.DISPATCH_NFC_MESSAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MOUNT_FORMAT_FILESYSTEMS] (ed3d24f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{25ecddc android.permission.MOUNT_FORMAT_FILESYSTEMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PROCESS_OUTGOING_CALLS] (93edee5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{1ccddba android.permission.PROCESS_OUTGOING_CALLS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_CELL_BROADCASTS] (7a5446b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{1f8ebc8 android.permission.READ_CELL_BROADCASTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REQUEST_DELETE_PACKAGES] (3838461):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{55b1b86 android.permission.REQUEST_DELETE_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.OEM_UNLOCK_STATE] (9d1bc47):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{b94fc74 android.permission.OEM_UNLOCK_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REGISTER_CONNECTION_MANAGER] (913059d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{d3d6a12 android.permission.REGISTER_CONNECTION_MANAGER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_DEVICE_ADMINS] (563d5e3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{73f6be0 android.permission.MANAGE_DEVICE_ADMINS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CLEAR_APP_CACHE] (81f5e99):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{784155e android.permission.CLEAR_APP_CACHE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_APP_IDLE_STATE] (673ed3f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{f5f660c android.permission.CHANGE_APP_IDLE_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_TRUST_AGENT] (5fe4b55):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{f8296a android.permission.BIND_TRUST_AGENT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_DOCUMENTS] (8441e5b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{ba2d6f8 android.permission.MANAGE_DOCUMENTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_PDB_STATE] (da547d1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{7e77236 android.permission.ACCESS_PDB_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_NETWORK_POLICY] (e1c4537):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{eaa6aa4 android.permission.MANAGE_NETWORK_POLICY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_REMOTEVIEWS] (9e5900d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{fb07bc2 android.permission.BIND_REMOTEVIEWS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ASEC_MOUNT_UNMOUNT] (de5fdd3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2758d10 android.permission.ASEC_MOUNT_UNMOUNT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GRANT_RUNTIME_PERMISSIONS] (7682009):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer|verifier
+    perm=Permission{10e920e android.permission.GRANT_RUNTIME_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_POINTER_SPEED] (888a42f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{f8e6a3c android.permission.SET_POINTER_SPEED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_BACKGROUND_DATA_SETTING] (a69b3c5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{325c11a android.permission.CHANGE_BACKGROUND_DATA_SETTING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_CONTENT_RATING_SYSTEMS] (c05544b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{af5ee28 android.permission.READ_CONTENT_RATING_SYSTEMS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_NOTIFICATIONS] (436c741):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{94ed4e6 android.permission.MANAGE_NOTIFICATIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.USE_COLORIZED_NOTIFICATIONS] (b52ea27):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|setup
+    perm=Permission{6cfc4d4 android.permission.USE_COLORIZED_NOTIFICATIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GLOBAL_SEARCH] (467967d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1a35972 android.permission.GLOBAL_SEARCH}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NET_TUNNELING] (7fa01c3):
+    sourcePackage=android
+    uid=1000 gids=[1016] type=1 prot=signature
+    perm=Permission{1ce5a40 android.permission.NET_TUNNELING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONNECTIVITY_INTERNAL] (1dc1d79):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{499abe android.permission.CONNECTIVITY_INTERNAL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FACTORY_TEST] (970f71f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{15eda6c android.permission.FACTORY_TEST}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_WALLPAPER_HINTS] (7781835):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{380a4ca android.permission.SET_WALLPAPER_HINTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_MEDIA_PROJECTION] (e37e63b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2953158 android.permission.MANAGE_MEDIA_PROJECTION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_SYNC_SETTINGS] (9f02b1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{c6c4396 android.permission.READ_SYNC_SETTINGS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.browser.permission.WRITE_HISTORY_BOOKMARKS] (2b4ab17):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{dd80b04 com.android.browser.permission.WRITE_HISTORY_BOOKMARKS}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_ACCOUNTS] (17018ed):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{8a10322 android.permission.GET_ACCOUNTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BROADCAST_PACKAGE_REMOVED] (9cee1b3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{94cd370 android.permission.BROADCAST_PACKAGE_REMOVED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DISABLE_INPUT_DEVICE] (6c256e9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{8702f6e android.permission.DISABLE_INPUT_DEVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RUN_IN_BACKGROUND] (34be60f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{603b69c android.permission.RUN_IN_BACKGROUND}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.OVERRIDE_WIFI_CONFIG] (9e078a5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{df3d47a android.permission.OVERRIDE_WIFI_CONFIG}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FORCE_STOP_PACKAGES] (bead42b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{3e3a088 android.permission.FORCE_STOP_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_CA_CERTIFICATES] (404fa21):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{dabe46 android.permission.MANAGE_CA_CERTIFICATES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_MEDIA_KEY_LISTENER] (3408807):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{8563d34 android.permission.SET_MEDIA_KEY_LISTENER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.permission.BIND_EUICC_SERVICE] (d96175d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2f478d2 com.android.permission.BIND_EUICC_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS] (3539da3):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|installer
+    perm=Permission{3b3f8a0 android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAPTURE_VIDEO_OUTPUT] (521cc59):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{17d501e android.permission.CAPTURE_VIDEO_OUTPUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_NOTIFICATIONS] (5f870ff):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|appop
+    perm=Permission{16ffecc android.permission.ACCESS_NOTIFICATIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WRITE_EXTERNAL_STORAGE] (a19d515):
+    sourcePackage=android
+    uid=1000 gids=null type=1 prot=dangerous
+    perm=Permission{f2a502a android.permission.WRITE_EXTERNAL_STORAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.VIBRATE] (3ed1e1b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal|instant
+    perm=Permission{f043bb8 android.permission.VIBRATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_ACCESSIBILITY_SERVICE] (74fad91):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{2f544f6 android.permission.BIND_ACCESSIBILITY_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_ACCESSIBILITY_DATA] (9b580f7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{59d5b64 android.permission.MODIFY_ACCESSIBILITY_DATA}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_ACTIVITY_STACKS] (93091cd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{7a8ba82 android.permission.MANAGE_ACTIVITY_STACKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.UPDATE_TIME_ZONE_RULES] (e373593):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{286c9d0 android.permission.UPDATE_TIME_ZONE_RULES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.HDMI_CEC] (bc17dc9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{82bfcce android.permission.HDMI_CEC}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_INPUT_METHOD] (71597ef):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{a56b2fc android.permission.BIND_INPUT_METHOD}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INVOKE_CARRIER_SETUP] (c5b2d85):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{48f17da android.permission.INVOKE_CARRIER_SETUP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST] (6cdc40b):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{2da02e8 android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REMOVE_DRM_CERTIFICATES] (b261d01):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{bd6d7a6 android.permission.REMOVE_DRM_CERTIFICATES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_LOWPAN_STATE] (9295e7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{fc06594 android.permission.CHANGE_LOWPAN_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_USER_DICTIONARY] (856883d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{688c832 android.permission.READ_USER_DICTIONARY}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FILTER_EVENTS] (de8a983):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{e084700 android.permission.FILTER_EVENTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECEIVE_EMERGENCY_BROADCAST] (9286b39):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{df7357e android.permission.RECEIVE_EMERGENCY_BROADCAST}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.VIEW_INSTANT_APPS] (2025adf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|preinstalled
+    perm=Permission{a2ad32c android.permission.VIEW_INSTANT_APPS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CREATE_USERS] (9b81f5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c4d2b8a android.permission.CREATE_USERS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_NETWORK_ACCOUNTING] (6dbc5fb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{d07f618 android.permission.MODIFY_NETWORK_ACCOUNTING}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CRYPT_KEEPER] (7ef4871):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{15a7656 android.permission.CRYPT_KEEPER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SEND_EMBMS_INTENTS] (16c6d7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{b925bc4 android.permission.SEND_EMBMS_INTENTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_NFC_SERVICE] (2defaad):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{81fa1e2 android.permission.BIND_NFC_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.voicemail.permission.WRITE_VOICEMAIL] (f96f973):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{53b7030 com.android.voicemail.permission.WRITE_VOICEMAIL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_DETAILED_TASKS] (b9d94a9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{919fa2e android.permission.GET_DETAILED_TASKS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.NOTIFY_PENDING_SYSTEM_UPDATE] (7ddb9cf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{d1f5f5c android.permission.NOTIFY_PENDING_SYSTEM_UPDATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DISPATCH_PROVISIONING_MESSAGE] (291d265):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{54f8b3a android.permission.DISPATCH_PROVISIONING_MESSAGE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ALLOW_ANY_CODEC_FOR_PLAYBACK] (82623eb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{9f11548 android.permission.ALLOW_ANY_CODEC_FOR_PLAYBACK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_APPWIDGET_BIND_PERMISSIONS] (dd22fe1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{61b2106 android.permission.MODIFY_APPWIDGET_BIND_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_WIFI_STATE] (e4113c7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{8a63df4 android.permission.ACCESS_WIFI_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.FORCE_BACK] (460e91d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{db84792 android.permission.FORCE_BACK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_IMS_SERVICE] (a312563):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{de34560 android.permission.BIND_IMS_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CHANGE_WIMAX_STATE] (127fa19):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{48f4ade android.permission.CHANGE_WIMAX_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CAMERA_DISABLE_TRANSMIT_LED] (f86b4bf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{227578c android.permission.CAMERA_DISABLE_TRANSMIT_LED}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.REQUEST_INSTALL_PACKAGES] (9b51ed5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|appop
+    perm=Permission{f4136ea android.permission.REQUEST_INSTALL_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.CONTROL_INCALL_EXPERIENCE] (7bdddb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4b86078 android.permission.CONTROL_INCALL_EXPERIENCE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MODIFY_PHONE_STATE] (4b5d351):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{973d7b6 android.permission.MODIFY_PHONE_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_VR_MANAGER] (ed07cb7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{14f0c24 android.permission.ACCESS_VR_MANAGER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_AUTO_FILL] (c33538d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{15db942 android.permission.MANAGE_AUTO_FILL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.PACKET_KEEPALIVE_OFFLOAD] (e662d53):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{482c690 android.permission.PACKET_KEEPALIVE_OFFLOAD}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.launcher.permission.INSTALL_SHORTCUT] (78e9b89):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{12278e com.android.launcher.permission.INSTALL_SHORTCUT}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_TEXT_SERVICE] (59c4baf):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{af5bbbc android.permission.BIND_TEXT_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.STATUS_BAR] (93c6745):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a8d2e9a android.permission.STATUS_BAR}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_FRAME_BUFFER] (76bf3cb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{740d7a8 android.permission.READ_FRAME_BUFFER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.RECORD_AUDIO] (c4132c1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous|instant
+    perm=Permission{77f9a66 android.permission.RECORD_AUDIO}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SEND_SMS_NO_CONFIRMATION] (34401a7):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{a9fc654 android.permission.SEND_SMS_NO_CONFIRMATION}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DUMP] (d6d39fd):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|development
+    perm=Permission{5daf6f2 android.permission.DUMP}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.GET_APP_GRANTED_URI_PERMISSIONS] (6a51143):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c5cf3c0 android.permission.GET_APP_GRANTED_URI_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.LOCATION_HARDWARE] (c5878f9):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{1d903e android.permission.LOCATION_HARDWARE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_SOCIAL_STREAM] (c7d7e9f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal
+    perm=Permission{bfd8bec android.permission.READ_SOCIAL_STREAM}
+    flags=0x40000002
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.WAKE_LOCK] (1eabb5):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=normal|instant
+    perm=Permission{85e724a android.permission.WAKE_LOCK}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_CONTACTS] (64565bb):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{a2d7ad8 android.permission.READ_CONTACTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.INJECT_EVENTS] (bdb4e31):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{9196916 android.permission.INJECT_EVENTS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE] (adaa297):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{46b6c84 android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.BIND_CHOOSER_TARGET_SERVICE] (ee59c6d):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6bb00a2 android.permission.BIND_CHOOSER_TARGET_SERVICE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.UPDATE_APP_OPS_STATS] (71cd133):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged|installer
+    perm=Permission{f74ccf0 android.permission.UPDATE_APP_OPS_STATS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MANAGE_CARRIER_OEM_UNLOCK_STATE] (ccc9269):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{dec84ee android.permission.MANAGE_CARRIER_OEM_UNLOCK_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.ACCESS_INPUT_FLINGER] (c494d8f):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{c71c81c android.permission.ACCESS_INPUT_FLINGER}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS] (912ec25):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{aa001fa android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.READ_OEM_UNLOCK_STATE] (81733ab):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{4e14a08 android.permission.READ_OEM_UNLOCK_STATE}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.SET_SCREEN_COMPATIBILITY] (2ab25a1):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{3dc43c6 android.permission.SET_SCREEN_COMPATIBILITY}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.MEDIA_CONTENT_CONTROL] (2935f87):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{944feb4 android.permission.MEDIA_CONTENT_CONTROL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [android.permission.DELETE_PACKAGES] (b337add):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{848d652 android.permission.DELETE_PACKAGES}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+  Permission [com.android.voicemail.permission.ADD_VOICEMAIL] (dbc6d23):
+    sourcePackage=android
+    uid=1000 gids=null type=0 prot=dangerous
+    perm=Permission{e8d5220 com.android.voicemail.permission.ADD_VOICEMAIL}
+    packageSetting=PackageSetting{4f6fe5d android/1000}
+
+Registered ContentProviders:
+  android/com.android.server.am.DumpHeapProvider:
+    Provider{5f1e7d9 android/com.android.server.am.DumpHeapProvider}
+
+ContentProvider Authorities:
+  [com.android.server.heapdump]:
+    Provider{5f1e7d9 android/com.android.server.am.DumpHeapProvider}
+      applicationInfo=ApplicationInfo{77a059e android}
+
+Key Set Manager:
+  [android]
+      Signing KeySets: 1
+
+Packages:
+  Package [android] (4f6fe5d):
+    userId=1000
+    sharedUser=SharedUserSetting{71b446f android.uid.system/1000}
+    pkg=Package{2deb87f android}
+    codePath=/system/framework/framework-res.apk
+    resourcePath=/system/framework/framework-res.apk
+    legacyNativeLibraryDir=/system/lib/framework-res
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=27 minSdk=27 targetSdk=27
+    versionName=8.1.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{77a059e android}
+    flags=[ SYSTEM PERSISTENT ALLOW_BACKUP ]
+    privateFlags=[ PRIVILEGED DEFAULT_TO_DEVICE_PROTECTED_STORAGE DIRECT_BOOT_AWARE PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/system
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2009-01-01 00:00:00
+    firstInstallTime=2009-01-01 00:00:00
+    lastUpdateTime=2009-01-01 00:00:00
+    signatures=PackageSignatures{645704c [b4addb29]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ SYSTEM PERSISTENT ALLOW_BACKUP ]
+    declared permissions:
+      android.permission.READ_CONTACTS: prot=dangerous, INSTALLED
+      android.permission.WRITE_CONTACTS: prot=dangerous, INSTALLED
+      android.permission.READ_CALENDAR: prot=dangerous, INSTALLED
+      android.permission.WRITE_CALENDAR: prot=dangerous, INSTALLED
+      android.permission.SEND_SMS: prot=dangerous, COSTS_MONEY, INSTALLED
+      android.permission.RECEIVE_SMS: prot=dangerous, INSTALLED
+      android.permission.READ_SMS: prot=dangerous, INSTALLED
+      android.permission.RECEIVE_WAP_PUSH: prot=dangerous, INSTALLED
+      android.permission.RECEIVE_MMS: prot=dangerous, INSTALLED
+      android.permission.READ_CELL_BROADCASTS: prot=dangerous, INSTALLED
+      android.permission.READ_EXTERNAL_STORAGE: prot=dangerous, INSTALLED
+      android.permission.WRITE_EXTERNAL_STORAGE: prot=dangerous, INSTALLED
+      android.permission.ACCESS_FINE_LOCATION: prot=dangerous|instant, INSTALLED
+      android.permission.ACCESS_COARSE_LOCATION: prot=dangerous|instant, INSTALLED
+      android.permission.READ_PHONE_STATE: prot=dangerous, INSTALLED
+      android.permission.READ_PHONE_NUMBERS: prot=dangerous|instant, INSTALLED
+      android.permission.CALL_PHONE: prot=dangerous, COSTS_MONEY, INSTALLED
+      android.permission.ACCESS_IMS_CALL_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.READ_CALL_LOG: prot=dangerous, INSTALLED
+      android.permission.WRITE_CALL_LOG: prot=dangerous, INSTALLED
+      com.android.voicemail.permission.ADD_VOICEMAIL: prot=dangerous, INSTALLED
+      android.permission.USE_SIP: prot=dangerous, INSTALLED
+      android.permission.PROCESS_OUTGOING_CALLS: prot=dangerous, INSTALLED
+      android.permission.ANSWER_PHONE_CALLS: prot=dangerous|runtime, INSTALLED
+      android.permission.MANAGE_OWN_CALLS: prot=normal, INSTALLED
+      android.permission.RECORD_AUDIO: prot=dangerous|instant, INSTALLED
+      android.permission.ACCESS_UCE_PRESENCE_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_UCE_OPTIONS_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.CAMERA: prot=dangerous|instant, INSTALLED
+      android.permission.BODY_SENSORS: prot=dangerous, INSTALLED
+      android.permission.USE_FINGERPRINT: prot=normal, INSTALLED
+      android.permission.READ_PROFILE: prot=normal, HIDDEN, INSTALLED
+      android.permission.WRITE_PROFILE: prot=normal, HIDDEN, INSTALLED
+      android.permission.READ_SOCIAL_STREAM: prot=normal, HIDDEN, INSTALLED
+      android.permission.WRITE_SOCIAL_STREAM: prot=normal, HIDDEN, INSTALLED
+      android.permission.READ_USER_DICTIONARY: prot=normal, HIDDEN, INSTALLED
+      android.permission.WRITE_USER_DICTIONARY: prot=normal, HIDDEN, INSTALLED
+      android.permission.WRITE_SMS: prot=normal, HIDDEN, INSTALLED
+      com.android.browser.permission.READ_HISTORY_BOOKMARKS: prot=normal, HIDDEN, INSTALLED
+      com.android.browser.permission.WRITE_HISTORY_BOOKMARKS: prot=normal, HIDDEN, INSTALLED
+      android.permission.AUTHENTICATE_ACCOUNTS: prot=normal, HIDDEN, INSTALLED
+      android.permission.MANAGE_ACCOUNTS: prot=normal, HIDDEN, INSTALLED
+      android.permission.USE_CREDENTIALS: prot=normal, HIDDEN, INSTALLED
+      android.permission.SUBSCRIBED_FEEDS_READ: prot=normal, HIDDEN, INSTALLED
+      android.permission.SUBSCRIBED_FEEDS_WRITE: prot=normal, HIDDEN, INSTALLED
+      android.permission.FLASHLIGHT: prot=normal, HIDDEN, INSTALLED
+      android.permission.SEND_RESPOND_VIA_MESSAGE: prot=signature|privileged, INSTALLED
+      android.permission.SEND_SMS_NO_CONFIRMATION: prot=signature|privileged, INSTALLED
+      android.permission.CARRIER_FILTER_SMS: prot=signature|privileged, INSTALLED
+      android.permission.RECEIVE_EMERGENCY_BROADCAST: prot=signature|privileged, INSTALLED
+      android.permission.RECEIVE_BLUETOOTH_MAP: prot=signature|privileged, INSTALLED
+      android.permission.BIND_DIRECTORY_SEARCH: prot=signature|privileged, INSTALLED
+      android.permission.MODIFY_CELL_BROADCASTS: prot=signature|privileged, INSTALLED
+      com.android.alarm.permission.SET_ALARM: prot=normal, INSTALLED
+      com.android.voicemail.permission.WRITE_VOICEMAIL: prot=signature|privileged, INSTALLED
+      com.android.voicemail.permission.READ_VOICEMAIL: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_LOCATION_EXTRA_COMMANDS: prot=normal, INSTALLED
+      android.permission.INSTALL_LOCATION_PROVIDER: prot=signature|privileged, INSTALLED
+      android.permission.HDMI_CEC: prot=signature|privileged, INSTALLED
+      android.permission.LOCATION_HARDWARE: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_MOCK_LOCATION: prot=signature, INSTALLED
+      android.permission.INTERNET: prot=normal|instant, INSTALLED
+      android.permission.ACCESS_NETWORK_STATE: prot=normal|instant, INSTALLED
+      android.permission.ACCESS_WIFI_STATE: prot=normal, INSTALLED
+      android.permission.CHANGE_WIFI_STATE: prot=normal, INSTALLED
+      android.permission.READ_WIFI_CREDENTIAL: prot=signature|privileged, INSTALLED
+      android.permission.TETHER_PRIVILEGED: prot=signature|privileged, INSTALLED
+      android.permission.RECEIVE_WIFI_CREDENTIAL_CHANGE: prot=signature|privileged, INSTALLED
+      android.permission.OVERRIDE_WIFI_CONFIG: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_WIMAX_STATE: prot=normal, INSTALLED
+      android.permission.CHANGE_WIMAX_STATE: prot=normal, INSTALLED
+      android.permission.SCORE_NETWORKS: prot=signature|privileged, INSTALLED
+      android.permission.REQUEST_NETWORK_SCORES: prot=signature|setup, INSTALLED
+      android.permission.NETWORK_STACK: prot=signature, INSTALLED
+      android.permission.NETWORK_SETTINGS: prot=signature, INSTALLED
+      android.permission.ACCESS_LOWPAN_STATE: prot=signature|privileged, INSTALLED
+      android.permission.CHANGE_LOWPAN_STATE: prot=signature|privileged, INSTALLED
+      android.permission.READ_LOWPAN_CREDENTIAL: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_LOWPAN_INTERFACES: prot=signature|privileged, INSTALLED
+      android.permission.BLUETOOTH: prot=normal, INSTALLED
+      android.permission.BLUETOOTH_ADMIN: prot=normal, INSTALLED
+      android.permission.BLUETOOTH_PRIVILEGED: prot=signature|privileged, INSTALLED
+      android.permission.BLUETOOTH_MAP: prot=signature, INSTALLED
+      android.permission.BLUETOOTH_STACK: prot=signature, INSTALLED
+      android.permission.NFC: prot=normal, INSTALLED
+      android.permission.CONNECTIVITY_INTERNAL: prot=signature|privileged, INSTALLED
+      android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS: prot=signature|privileged, INSTALLED
+      android.permission.PACKET_KEEPALIVE_OFFLOAD: prot=signature|privileged, INSTALLED
+      android.permission.RECEIVE_DATA_ACTIVITY_CHANGE: prot=signature|privileged, INSTALLED
+      android.permission.LOOP_RADIO: prot=signature|privileged, INSTALLED
+      android.permission.NFC_HANDOVER_STATUS: prot=signature|privileged, INSTALLED
+      android.permission.GET_ACCOUNTS: prot=dangerous, INSTALLED
+      android.permission.ACCOUNT_MANAGER: prot=signature, INSTALLED
+      android.permission.CHANGE_WIFI_MULTICAST_STATE: prot=normal, INSTALLED
+      android.permission.VIBRATE: prot=normal|instant, INSTALLED
+      android.permission.WAKE_LOCK: prot=normal|instant, INSTALLED
+      android.permission.TRANSMIT_IR: prot=normal, INSTALLED
+      android.permission.MODIFY_AUDIO_SETTINGS: prot=normal, INSTALLED
+      android.permission.MANAGE_USB: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_MTP: prot=signature|privileged, INSTALLED
+      android.permission.HARDWARE_TEST: prot=signature, INSTALLED
+      android.permission.ACCESS_BROADCAST_RADIO: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_FM_RADIO: prot=signature|privileged, INSTALLED
+      android.permission.NET_ADMIN: prot=signature, INSTALLED
+      android.permission.REMOTE_AUDIO_PLAYBACK: prot=signature, INSTALLED
+      android.permission.TV_INPUT_HARDWARE: prot=signature|privileged, INSTALLED
+      android.permission.CAPTURE_TV_INPUT: prot=signature|privileged, INSTALLED
+      android.permission.DVB_DEVICE: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_CARRIER_OEM_UNLOCK_STATE: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: prot=signature|privileged, INSTALLED
+      android.permission.READ_OEM_UNLOCK_STATE: prot=signature|privileged, INSTALLED
+      android.permission.OEM_UNLOCK_STATE: prot=signature, INSTALLED
+      android.permission.ACCESS_PDB_STATE: prot=signature, INSTALLED
+      android.permission.NOTIFY_PENDING_SYSTEM_UPDATE: prot=signature|privileged, INSTALLED
+      android.permission.CAMERA_DISABLE_TRANSMIT_LED: prot=signature|privileged, INSTALLED
+      android.permission.CAMERA_SEND_SYSTEM_EVENTS: prot=signature|privileged, INSTALLED
+      android.permission.MODIFY_PHONE_STATE: prot=signature|privileged, INSTALLED
+      android.permission.READ_PRECISE_PHONE_STATE: prot=signature|privileged, INSTALLED
+      android.permission.READ_PRIVILEGED_PHONE_STATE: prot=signature|privileged, INSTALLED
+      android.permission.REGISTER_SIM_SUBSCRIPTION: prot=signature|privileged, INSTALLED
+      android.permission.REGISTER_CALL_PROVIDER: prot=signature|privileged, INSTALLED
+      android.permission.REGISTER_CONNECTION_MANAGER: prot=signature|privileged, INSTALLED
+      android.permission.BIND_INCALL_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.BIND_VISUAL_VOICEMAIL_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.BIND_SCREENING_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.BIND_CONNECTION_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.BIND_TELECOM_CONNECTION_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.CONTROL_INCALL_EXPERIENCE: prot=signature|privileged, INSTALLED
+      android.permission.RECEIVE_STK_COMMANDS: prot=signature|privileged, INSTALLED
+      android.permission.SEND_EMBMS_INTENTS: prot=signature|privileged, INSTALLED
+      android.permission.BIND_IMS_SERVICE: prot=signature|privileged, INSTALLED
+      com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS: prot=signature|privileged|development, INSTALLED
+      com.android.permission.BIND_EUICC_SERVICE: prot=signature, INSTALLED
+      android.permission.WRITE_MEDIA_STORAGE: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_DOCUMENTS: prot=signature, INSTALLED
+      android.permission.CACHE_CONTENT: prot=signature, INSTALLED
+      android.permission.ALLOCATE_AGGRESSIVE: prot=signature|privileged, INSTALLED
+      android.permission.DISABLE_KEYGUARD: prot=normal, INSTALLED
+      android.permission.GET_TASKS: prot=normal, INSTALLED
+      android.permission.REAL_GET_TASKS: prot=signature|privileged, INSTALLED
+      android.permission.START_TASKS_FROM_RECENTS: prot=signature|privileged, INSTALLED
+      android.permission.INTERACT_ACROSS_USERS: prot=signature|privileged|development, INSTALLED
+      android.permission.INTERACT_ACROSS_USERS_FULL: prot=signature|installer, INSTALLED
+      android.permission.MANAGE_USERS: prot=signature|privileged, INSTALLED
+      android.permission.CREATE_USERS: prot=signature, INSTALLED
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: prot=signature, INSTALLED
+      android.permission.GET_DETAILED_TASKS: prot=signature, INSTALLED
+      android.permission.REORDER_TASKS: prot=normal, INSTALLED
+      android.permission.REMOVE_TASKS: prot=signature, INSTALLED
+      android.permission.MANAGE_ACTIVITY_STACKS: prot=signature|privileged, INSTALLED
+      android.permission.ACTIVITY_EMBEDDING: prot=signature|privileged, INSTALLED
+      android.permission.START_ANY_ACTIVITY: prot=signature, INSTALLED
+      android.permission.RESTART_PACKAGES: prot=normal, INSTALLED
+      android.permission.KILL_BACKGROUND_PROCESSES: prot=normal, INSTALLED
+      android.permission.GET_PROCESS_STATE_AND_OOM_SCORE: prot=signature|privileged|development, INSTALLED
+      android.permission.GET_INTENT_SENDER_INTENT: prot=signature, INSTALLED
+      android.permission.SYSTEM_ALERT_WINDOW: prot=signature|development|appop|pre23|preinstalled, INSTALLED
+      android.permission.RUN_IN_BACKGROUND: prot=signature, INSTALLED
+      android.permission.USE_DATA_IN_BACKGROUND: prot=signature, INSTALLED
+      android.permission.SET_DISPLAY_OFFSET: prot=signature|privileged, INSTALLED
+      android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND: prot=normal, INSTALLED
+      android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND: prot=normal, INSTALLED
+      android.permission.SET_WALLPAPER: prot=normal, INSTALLED
+      android.permission.SET_WALLPAPER_HINTS: prot=normal, INSTALLED
+      android.permission.READ_WALLPAPER_INTERNAL: prot=signature|privileged, INSTALLED
+      android.permission.SET_TIME: prot=signature|privileged, INSTALLED
+      android.permission.SET_TIME_ZONE: prot=signature|privileged, INSTALLED
+      android.permission.EXPAND_STATUS_BAR: prot=normal, INSTALLED
+      com.android.launcher.permission.INSTALL_SHORTCUT: prot=normal, INSTALLED
+      com.android.launcher.permission.UNINSTALL_SHORTCUT: prot=normal, INSTALLED
+      android.permission.READ_SYNC_SETTINGS: prot=normal, INSTALLED
+      android.permission.WRITE_SYNC_SETTINGS: prot=normal, INSTALLED
+      android.permission.READ_SYNC_STATS: prot=normal, INSTALLED
+      android.permission.SET_SCREEN_COMPATIBILITY: prot=signature, INSTALLED
+      android.permission.CHANGE_CONFIGURATION: prot=signature|privileged|development, INSTALLED
+      android.permission.WRITE_SETTINGS: prot=signature|appop|pre23|preinstalled, INSTALLED
+      android.permission.WRITE_GSERVICES: prot=signature|privileged, INSTALLED
+      android.permission.FORCE_STOP_PACKAGES: prot=signature|privileged, INSTALLED
+      android.permission.RETRIEVE_WINDOW_CONTENT: prot=signature|privileged, INSTALLED
+      android.permission.SET_ANIMATION_SCALE: prot=signature|privileged|development, INSTALLED
+      android.permission.PERSISTENT_ACTIVITY: prot=normal, INSTALLED
+      android.permission.GET_PACKAGE_SIZE: prot=normal, INSTALLED
+      android.permission.SET_PREFERRED_APPLICATIONS: prot=signature|verifier, INSTALLED
+      android.permission.RECEIVE_BOOT_COMPLETED: prot=normal, INSTALLED
+      android.permission.BROADCAST_STICKY: prot=normal, INSTALLED
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: prot=signature|privileged, INSTALLED
+      android.permission.MOUNT_FORMAT_FILESYSTEMS: prot=signature|privileged, INSTALLED
+      android.permission.STORAGE_INTERNAL: prot=signature, INSTALLED
+      android.permission.ASEC_ACCESS: prot=signature, INSTALLED
+      android.permission.ASEC_CREATE: prot=signature, INSTALLED
+      android.permission.ASEC_DESTROY: prot=signature, INSTALLED
+      android.permission.ASEC_MOUNT_UNMOUNT: prot=signature, INSTALLED
+      android.permission.ASEC_RENAME: prot=signature, INSTALLED
+      android.permission.WRITE_APN_SETTINGS: prot=signature|privileged, INSTALLED
+      android.permission.CHANGE_NETWORK_STATE: prot=normal, INSTALLED
+      android.permission.CLEAR_APP_CACHE: prot=signature|privileged, INSTALLED
+      android.permission.ALLOW_ANY_CODEC_FOR_PLAYBACK: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_CA_CERTIFICATES: prot=signature|privileged, INSTALLED
+      android.permission.RECOVERY: prot=signature|privileged, INSTALLED
+      android.permission.BIND_JOB_SERVICE: prot=signature, INSTALLED
+      android.permission.UPDATE_CONFIG: prot=signature|privileged, INSTALLED
+      android.permission.UPDATE_TIME_ZONE_RULES: prot=signature|privileged, INSTALLED
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: prot=signature, INSTALLED
+      android.permission.RESET_SHORTCUT_MANAGER_THROTTLING: prot=signature, INSTALLED
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: prot=signature, INSTALLED
+      android.permission.CHANGE_OVERLAY_PACKAGES: prot=signature|privileged, INSTALLED
+      android.permission.WRITE_SECURE_SETTINGS: prot=signature|privileged|development, INSTALLED
+      android.permission.DUMP: prot=signature|privileged|development, INSTALLED
+      android.permission.READ_LOGS: prot=signature|privileged|development, INSTALLED
+      android.permission.SET_DEBUG_APP: prot=signature|privileged|development, INSTALLED
+      android.permission.SET_PROCESS_LIMIT: prot=signature|privileged|development, INSTALLED
+      android.permission.SET_ALWAYS_FINISH: prot=signature|privileged|development, INSTALLED
+      android.permission.SIGNAL_PERSISTENT_PROCESSES: prot=signature|privileged|development, INSTALLED
+      android.permission.GET_ACCOUNTS_PRIVILEGED: prot=signature|privileged, INSTALLED
+      android.permission.GET_PASSWORD: prot=signature, INSTALLED
+      android.permission.DIAGNOSTIC: prot=signature, INSTALLED
+      android.permission.STATUS_BAR: prot=signature|privileged, INSTALLED
+      android.permission.STATUS_BAR_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_QUICK_SETTINGS_TILE: prot=signature, INSTALLED
+      android.permission.FORCE_BACK: prot=signature, INSTALLED
+      android.permission.UPDATE_DEVICE_STATS: prot=signature|privileged, INSTALLED
+      android.permission.GET_APP_OPS_STATS: prot=signature|privileged|development, INSTALLED
+      android.permission.UPDATE_APP_OPS_STATS: prot=signature|privileged|installer, INSTALLED
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: prot=signature|installer, INSTALLED
+      android.permission.INTERNAL_SYSTEM_WINDOW: prot=signature, INSTALLED
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: prot=signature|installer, INSTALLED
+      android.permission.MANAGE_APP_TOKENS: prot=signature, INSTALLED
+      android.permission.REGISTER_WINDOW_MANAGER_LISTENERS: prot=signature, INSTALLED
+      android.permission.FREEZE_SCREEN: prot=signature, INSTALLED
+      android.permission.INJECT_EVENTS: prot=signature, INSTALLED
+      android.permission.FILTER_EVENTS: prot=signature, INSTALLED
+      android.permission.RETRIEVE_WINDOW_TOKEN: prot=signature, INSTALLED
+      android.permission.MODIFY_ACCESSIBILITY_DATA: prot=signature, INSTALLED
+      android.permission.CHANGE_ACCESSIBILITY_VOLUME: prot=signature, INSTALLED
+      android.permission.FRAME_STATS: prot=signature, INSTALLED
+      android.permission.TEMPORARY_ENABLE_ACCESSIBILITY: prot=signature, INSTALLED
+      android.permission.SET_ACTIVITY_WATCHER: prot=signature, INSTALLED
+      android.permission.SHUTDOWN: prot=signature|privileged, INSTALLED
+      android.permission.STOP_APP_SWITCHES: prot=signature|privileged, INSTALLED
+      android.permission.GET_TOP_ACTIVITY_INFO: prot=signature, INSTALLED
+      android.permission.READ_INPUT_STATE: prot=signature, INSTALLED
+      android.permission.BIND_INPUT_METHOD: prot=signature, INSTALLED
+      android.permission.BIND_MIDI_DEVICE_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_ACCESSIBILITY_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_PRINT_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_PRINT_RECOMMENDATION_SERVICE: prot=signature, INSTALLED
+      android.permission.READ_PRINT_SERVICES: prot=signature|preinstalled, INSTALLED
+      android.permission.READ_PRINT_SERVICE_RECOMMENDATIONS: prot=signature|preinstalled, INSTALLED
+      android.permission.BIND_NFC_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_PRINT_SPOOLER_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_COMPANION_DEVICE_MANAGER_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_RUNTIME_PERMISSION_PRESENTER_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_TEXT_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_VPN_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_WALLPAPER: prot=signature|privileged, INSTALLED
+      android.permission.BIND_VOICE_INTERACTION: prot=signature, INSTALLED
+      android.permission.BIND_AUTOFILL_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_AUTOFILL: prot=signature, INSTALLED
+      android.permission.MANAGE_VOICE_KEYPHRASES: prot=signature|privileged, INSTALLED
+      android.permission.BIND_REMOTE_DISPLAY: prot=signature, INSTALLED
+      android.permission.BIND_TV_INPUT: prot=signature|privileged, INSTALLED
+      android.permission.BIND_TV_REMOTE_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.TV_VIRTUAL_REMOTE_CONTROLLER: prot=signature|privileged, INSTALLED
+      android.permission.CHANGE_HDMI_CEC_ACTIVE_SOURCE: prot=signature|privileged, INSTALLED
+      android.permission.MODIFY_PARENTAL_CONTROLS: prot=signature|privileged, INSTALLED
+      android.permission.READ_CONTENT_RATING_SYSTEMS: prot=signature|privileged, INSTALLED
+      android.permission.NOTIFY_TV_INPUTS: prot=signature|privileged, INSTALLED
+      android.permission.BIND_ROUTE_PROVIDER: prot=signature, INSTALLED
+      android.permission.BIND_DEVICE_ADMIN: prot=signature, INSTALLED
+      android.permission.MANAGE_DEVICE_ADMINS: prot=signature|privileged, INSTALLED
+      android.permission.SET_ORIENTATION: prot=signature, INSTALLED
+      android.permission.SET_POINTER_SPEED: prot=signature, INSTALLED
+      android.permission.SET_INPUT_CALIBRATION: prot=signature, INSTALLED
+      android.permission.SET_KEYBOARD_LAYOUT: prot=signature, INSTALLED
+      android.permission.TABLET_MODE: prot=signature, INSTALLED
+      android.permission.REQUEST_INSTALL_PACKAGES: prot=signature|appop, INSTALLED
+      android.permission.REQUEST_DELETE_PACKAGES: prot=normal, INSTALLED
+      android.permission.INSTALL_PACKAGES: prot=signature|privileged, INSTALLED
+      android.permission.CLEAR_APP_USER_DATA: prot=signature|installer, INSTALLED
+      android.permission.GET_APP_GRANTED_URI_PERMISSIONS: prot=signature, INSTALLED
+      android.permission.CLEAR_APP_GRANTED_URI_PERMISSIONS: prot=signature, INSTALLED
+      android.permission.DELETE_CACHE_FILES: prot=signature|privileged, INSTALLED
+      android.permission.DELETE_PACKAGES: prot=signature|privileged, INSTALLED
+      android.permission.MOVE_PACKAGE: prot=signature|privileged, INSTALLED
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: prot=signature|privileged, INSTALLED
+      android.permission.GRANT_RUNTIME_PERMISSIONS: prot=signature|installer|verifier, INSTALLED
+      android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS: prot=signature|installer|verifier, INSTALLED
+      android.permission.REVOKE_RUNTIME_PERMISSIONS: prot=signature|installer|verifier, INSTALLED
+      android.permission.OBSERVE_GRANT_REVOKE_PERMISSIONS: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_SURFACE_FLINGER: prot=signature, INSTALLED
+      android.permission.READ_FRAME_BUFFER: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_INPUT_FLINGER: prot=signature, INSTALLED
+      android.permission.DISABLE_INPUT_DEVICE: prot=signature, INSTALLED
+      android.permission.CONFIGURE_WIFI_DISPLAY: prot=signature, INSTALLED
+      android.permission.CONTROL_WIFI_DISPLAY: prot=signature, INSTALLED
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: prot=signature, INSTALLED
+      android.permission.CONTROL_VPN: prot=signature|privileged, INSTALLED
+      android.permission.CAPTURE_AUDIO_OUTPUT: prot=signature|privileged, INSTALLED
+      android.permission.CAPTURE_AUDIO_HOTWORD: prot=signature|privileged, INSTALLED
+      android.permission.MODIFY_AUDIO_ROUTING: prot=signature|privileged, INSTALLED
+      android.permission.CAPTURE_VIDEO_OUTPUT: prot=signature|privileged, INSTALLED
+      android.permission.CAPTURE_SECURE_VIDEO_OUTPUT: prot=signature|privileged, INSTALLED
+      android.permission.MEDIA_CONTENT_CONTROL: prot=signature|privileged, INSTALLED
+      android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER: prot=signature|privileged|development, INSTALLED
+      android.permission.SET_MEDIA_KEY_LISTENER: prot=signature|privileged|development, INSTALLED
+      android.permission.BRICK: prot=signature, INSTALLED
+      android.permission.REBOOT: prot=signature|privileged, INSTALLED
+      android.permission.DEVICE_POWER: prot=signature, INSTALLED
+      android.permission.USER_ACTIVITY: prot=signature|privileged, INSTALLED
+      android.permission.NET_TUNNELING: prot=signature, INSTALLED
+      android.permission.FACTORY_TEST: prot=signature, INSTALLED
+      android.permission.BROADCAST_PACKAGE_REMOVED: prot=signature, INSTALLED
+      android.permission.BROADCAST_SMS: prot=signature, INSTALLED
+      android.permission.BROADCAST_WAP_PUSH: prot=signature, INSTALLED
+      android.permission.BROADCAST_NETWORK_PRIVILEGED: prot=signature|privileged, INSTALLED
+      android.permission.MASTER_CLEAR: prot=signature|privileged, INSTALLED
+      android.permission.CALL_PRIVILEGED: prot=signature|privileged, INSTALLED
+      android.permission.PERFORM_CDMA_PROVISIONING: prot=signature|privileged, INSTALLED
+      android.permission.PERFORM_SIM_ACTIVATION: prot=signature|privileged, INSTALLED
+      android.permission.CONTROL_LOCATION_UPDATES: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_CHECKIN_PROPERTIES: prot=signature|privileged, INSTALLED
+      android.permission.PACKAGE_USAGE_STATS: prot=signature|privileged|development|appop, INSTALLED
+      android.permission.CHANGE_APP_IDLE_STATE: prot=signature, INSTALLED
+      android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST: prot=signature|privileged, INSTALLED
+      android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS: prot=normal, INSTALLED
+      android.permission.BATTERY_STATS: prot=signature|privileged|development, INSTALLED
+      android.permission.BACKUP: prot=signature|privileged, INSTALLED
+      android.permission.CONFIRM_FULL_BACKUP: prot=signature, INSTALLED
+      android.permission.BIND_REMOTEVIEWS: prot=signature|privileged, INSTALLED
+      android.permission.BIND_APPWIDGET: prot=signature|privileged, INSTALLED
+      android.permission.BIND_KEYGUARD_APPWIDGET: prot=signature|privileged, INSTALLED
+      android.permission.MODIFY_APPWIDGET_BIND_PERMISSIONS: prot=signature|privileged, INSTALLED
+      android.permission.CHANGE_BACKGROUND_DATA_SETTING: prot=signature, INSTALLED
+      android.permission.GLOBAL_SEARCH: prot=signature|privileged, INSTALLED
+      android.permission.GLOBAL_SEARCH_CONTROL: prot=signature, INSTALLED
+      android.permission.READ_SEARCH_INDEXABLES: prot=signature|privileged, INSTALLED
+      android.permission.SET_WALLPAPER_COMPONENT: prot=signature|privileged, INSTALLED
+      android.permission.READ_DREAM_STATE: prot=signature|privileged, INSTALLED
+      android.permission.WRITE_DREAM_STATE: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_CACHE_FILESYSTEM: prot=signature|privileged, INSTALLED
+      android.permission.COPY_PROTECTED_DATA: prot=signature, INSTALLED
+      android.permission.CRYPT_KEEPER: prot=signature|privileged, INSTALLED
+      android.permission.READ_NETWORK_USAGE_HISTORY: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_NETWORK_POLICY: prot=signature, INSTALLED
+      android.permission.MODIFY_NETWORK_ACCOUNTING: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_SUBSCRIPTION_PLANS: prot=signature|privileged, INSTALLED
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: prot=signature, INSTALLED
+      android.permission.PACKAGE_VERIFICATION_AGENT: prot=signature|privileged, INSTALLED
+      android.permission.BIND_PACKAGE_VERIFIER: prot=signature, INSTALLED
+      android.permission.INTENT_FILTER_VERIFICATION_AGENT: prot=signature|privileged, INSTALLED
+      android.permission.BIND_INTENT_FILTER_VERIFIER: prot=signature, INSTALLED
+      android.permission.SERIAL_PORT: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY: prot=signature, INSTALLED
+      android.permission.UPDATE_LOCK: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_NOTIFICATIONS: prot=signature|privileged|appop, INSTALLED
+      android.permission.ACCESS_NOTIFICATION_POLICY: prot=normal, INSTALLED
+      android.permission.MANAGE_NOTIFICATIONS: prot=signature, INSTALLED
+      android.permission.USE_COLORIZED_NOTIFICATIONS: prot=signature|setup, INSTALLED
+      android.permission.ACCESS_KEYGUARD_SECURE_STORAGE: prot=signature, INSTALLED
+      android.permission.MANAGE_FINGERPRINT: prot=signature|privileged, INSTALLED
+      android.permission.RESET_FINGERPRINT_LOCKOUT: prot=signature, INSTALLED
+      android.permission.CONTROL_KEYGUARD: prot=signature, INSTALLED
+      android.permission.TRUST_LISTENER: prot=signature, INSTALLED
+      android.permission.PROVIDE_TRUST_AGENT: prot=signature|privileged, INSTALLED
+      android.permission.LAUNCH_TRUST_AGENT_SETTINGS: prot=signature|privileged, INSTALLED
+      android.permission.BIND_TRUST_AGENT: prot=signature, INSTALLED
+      android.permission.BIND_NOTIFICATION_LISTENER_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_NOTIFICATION_ASSISTANT_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_CHOOSER_TARGET_SERVICE: prot=signature, INSTALLED
+      android.permission.PROVIDE_RESOLVER_RANKER_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.BIND_RESOLVER_RANKER_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_CONDITION_PROVIDER_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_DREAM_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_CACHE_QUOTA_SERVICE: prot=signature, INSTALLED
+      android.permission.INVOKE_CARRIER_SETUP: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_NETWORK_CONDITIONS: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_DRM_CERTIFICATES: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_MEDIA_PROJECTION: prot=signature, INSTALLED
+      android.permission.READ_INSTALL_SESSIONS: prot=normal, INSTALLED
+      android.permission.REMOVE_DRM_CERTIFICATES: prot=signature|privileged, INSTALLED
+      android.permission.BIND_CARRIER_MESSAGING_SERVICE: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_VOICE_INTERACTION_SERVICE: prot=signature, INSTALLED
+      android.permission.BIND_CARRIER_SERVICES: prot=signature|privileged, INSTALLED
+      android.permission.QUERY_DO_NOT_ASK_CREDENTIALS_ON_BOOT: prot=signature, INSTALLED
+      android.permission.KILL_UID: prot=signature|installer, INSTALLED
+      android.permission.LOCAL_MAC_ADDRESS: prot=signature|privileged, INSTALLED
+      android.permission.PEERS_MAC_ADDRESS: prot=signature|setup, INSTALLED
+      android.permission.DISPATCH_NFC_MESSAGE: prot=signature|privileged, INSTALLED
+      android.permission.MODIFY_DAY_NIGHT_MODE: prot=signature|privileged, INSTALLED
+      android.permission.ACCESS_INSTANT_APPS: prot=signature|installer|verifier, INSTALLED
+      android.permission.VIEW_INSTANT_APPS: prot=signature|preinstalled, INSTALLED
+      android.permission.RECEIVE_MEDIA_RESOURCE_USAGE: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_SOUND_TRIGGER: prot=signature|privileged, INSTALLED
+      android.permission.DISPATCH_PROVISIONING_MESSAGE: prot=signature|privileged, INSTALLED
+      android.permission.READ_BLOCKED_NUMBERS: prot=signature, INSTALLED
+      android.permission.WRITE_BLOCKED_NUMBERS: prot=signature, INSTALLED
+      android.permission.BIND_VR_LISTENER_SERVICE: prot=signature, INSTALLED
+      android.permission.RESTRICTED_VR_ACCESS: prot=signature|preinstalled, INSTALLED
+      android.permission.ACCESS_VR_MANAGER: prot=signature, INSTALLED
+      android.permission.ACCESS_VR_STATE: prot=signature|preinstalled, INSTALLED
+      android.permission.UPDATE_LOCK_TASK_PACKAGES: prot=signature|setup, INSTALLED
+      android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME: prot=signature|privileged, INSTALLED
+      android.permission.NOTIFICATION_DURING_SETUP: prot=signature|privileged, INSTALLED
+      android.permission.MANAGE_AUTO_FILL: prot=signature, INSTALLED
+      android.permission.MODIFY_THEME_OVERLAY: prot=signature, INSTALLED
+      android.permission.INSTANT_APP_FOREGROUND_SERVICE: prot=signature|development|appop|instant, INSTALLED
+    requested permissions:
+      android.permission.LOCATION_HARDWARE
+      android.permission.GET_ACCOUNTS
+      android.permission.BIND_JOB_SERVICE
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE
+      android.permission.CONTROL_VPN
+      android.permission.PACKAGE_USAGE_STATS
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE
+      android.permission.CONFIRM_FULL_BACKUP
+    install permissions:
+      android.permission.BIND_INCALL_SERVICE: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: granted=true
+      android.permission.ACCESS_WIMAX_STATE: granted=true
+      android.permission.RECOVERY: granted=true
+      android.permission.USE_CREDENTIALS: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.ACCESS_CHECKIN_PROPERTIES: granted=true
+      android.permission.INSTALL_LOCATION_PROVIDER: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.BROADCAST_PHONE_ACCOUNT_REGISTRATION: granted=true
+      android.permission.CLEAR_APP_USER_DATA: granted=true
+      android.permission.BROADCAST_CALLLOG_INFO: granted=true
+      android.permission.SHUTDOWN: granted=true
+      android.permission.NFC: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.MASTER_CLEAR: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.PEERS_MAC_ADDRESS: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.READ_PRINT_SERVICES: granted=true
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: granted=true
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.WRITE_BLOCKED_NUMBERS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.CONTROL_VPN: granted=true
+      android.permission.MANAGE_FINGERPRINT: granted=true
+      android.permission.BIND_CONNECTION_SERVICE: granted=true
+      android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS: granted=true
+      android.permission.MANAGE_USB: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.BIND_APPWIDGET: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      android.permission.BATTERY_STATS: granted=true
+      android.permission.PACKAGE_USAGE_STATS: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.MOVE_PACKAGE: granted=true
+      android.permission.READ_BLOCKED_NUMBERS: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      android.permission.HARDWARE_TEST: granted=true
+      android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME: granted=true
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: granted=true
+      android.permission.BIND_JOB_SERVICE: granted=true
+      android.permission.CONFIRM_FULL_BACKUP: granted=true
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.REVOKE_RUNTIME_PERMISSIONS: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.FLASHLIGHT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.BACKUP: granted=true
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.USER_ACTIVITY: granted=true
+      android.permission.READ_LOGS: granted=true
+      android.permission.COPY_PROTECTED_DATA: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_KEYBOARD_LAYOUT: granted=true
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: granted=true
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.REQUEST_NETWORK_SCORES: granted=true
+      android.permission.WRITE_USER_DICTIONARY: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.REBOOT: granted=true
+      android.permission.OEM_UNLOCK_STATE: granted=true
+      android.permission.MANAGE_DEVICE_ADMINS: granted=true
+      android.permission.CHANGE_APP_IDLE_STATE: granted=true
+      android.permission.GRANT_RUNTIME_PERMISSIONS: granted=true
+      android.permission.SET_POINTER_SPEED: granted=true
+      android.permission.MANAGE_NOTIFICATIONS: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.OVERRIDE_WIFI_CONFIG: granted=true
+      android.permission.FORCE_STOP_PACKAGES: granted=true
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: granted=true
+      android.permission.ACCESS_NOTIFICATIONS: granted=true
+      android.permission.VIBRATE: granted=true
+      com.android.certinstaller.INSTALL_AS_USER: granted=true
+      android.permission.READ_USER_DICTIONARY: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.CHANGE_WIMAX_STATE: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      com.android.launcher.permission.INSTALL_SHORTCUT: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.LOCATION_HARDWARE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      android.permission.DELETE_PACKAGES: granted=true
+    User 0: ceDataInode=-4294967015 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/framework-res__auto_generated_rro.apk
+
+Shared users:
+  SharedUser [android.uid.system] (71b446f):
+    userId=1000
+    install permissions:
+      android.permission.BIND_INCALL_SERVICE: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: granted=true
+      android.permission.ACCESS_WIMAX_STATE: granted=true
+      android.permission.RECOVERY: granted=true
+      android.permission.USE_CREDENTIALS: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.ACCESS_CHECKIN_PROPERTIES: granted=true
+      android.permission.INSTALL_LOCATION_PROVIDER: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.BROADCAST_PHONE_ACCOUNT_REGISTRATION: granted=true
+      android.permission.CLEAR_APP_USER_DATA: granted=true
+      android.permission.BROADCAST_CALLLOG_INFO: granted=true
+      android.permission.SHUTDOWN: granted=true
+      android.permission.NFC: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.MASTER_CLEAR: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.PEERS_MAC_ADDRESS: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      android.permission.READ_PRINT_SERVICES: granted=true
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: granted=true
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.WRITE_BLOCKED_NUMBERS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.CONTROL_VPN: granted=true
+      android.permission.MANAGE_FINGERPRINT: granted=true
+      android.permission.BIND_CONNECTION_SERVICE: granted=true
+      android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS: granted=true
+      android.permission.MANAGE_USB: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      android.permission.BIND_APPWIDGET: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      android.permission.BATTERY_STATS: granted=true
+      android.permission.PACKAGE_USAGE_STATS: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.MOVE_PACKAGE: granted=true
+      android.permission.READ_BLOCKED_NUMBERS: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      android.permission.HARDWARE_TEST: granted=true
+      android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME: granted=true
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: granted=true
+      android.permission.BIND_JOB_SERVICE: granted=true
+      android.permission.CONFIRM_FULL_BACKUP: granted=true
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.REVOKE_RUNTIME_PERMISSIONS: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.FLASHLIGHT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.BACKUP: granted=true
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.USER_ACTIVITY: granted=true
+      android.permission.READ_LOGS: granted=true
+      android.permission.COPY_PROTECTED_DATA: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_KEYBOARD_LAYOUT: granted=true
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: granted=true
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.REQUEST_NETWORK_SCORES: granted=true
+      android.permission.WRITE_USER_DICTIONARY: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.REBOOT: granted=true
+      android.permission.OEM_UNLOCK_STATE: granted=true
+      android.permission.MANAGE_DEVICE_ADMINS: granted=true
+      android.permission.CHANGE_APP_IDLE_STATE: granted=true
+      android.permission.GRANT_RUNTIME_PERMISSIONS: granted=true
+      android.permission.SET_POINTER_SPEED: granted=true
+      android.permission.MANAGE_NOTIFICATIONS: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.OVERRIDE_WIFI_CONFIG: granted=true
+      android.permission.FORCE_STOP_PACKAGES: granted=true
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: granted=true
+      android.permission.ACCESS_NOTIFICATIONS: granted=true
+      android.permission.VIBRATE: granted=true
+      com.android.certinstaller.INSTALL_AS_USER: granted=true
+      android.permission.READ_USER_DICTIONARY: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.CHANGE_WIMAX_STATE: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      com.android.launcher.permission.INSTALL_SHORTCUT: granted=true
+      android.permission.STATUS_BAR: granted=true
+      android.permission.LOCATION_HARDWARE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      android.permission.DELETE_PACKAGES: granted=true
+    User 0: 
+      gids=[3002, 1023, 1015, 3003, 3001, 1007]
+      runtime permissions:
+        android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+        android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+        android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+        android.permission.READ_PHONE_STATE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+        android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ GRANTED_BY_DEFAULT ]
+        android.permission.RECORD_AUDIO: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+        android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED GRANTED_BY_DEFAULT ]
+
+Package Changes:
+  Sequence number=3
+  User 0:
+    seq=1, package=com.softwinner.awmanager
+    seq=2, package=cn.modificator.launcher
+
+
+Dexopt state:
+  [android]
+
+
+Compiler stats:
+  [android]
+    (No recorded stats)

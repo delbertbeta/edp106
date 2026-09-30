@@ -1,0 +1,8 @@
+/system/vendor/overlay:
+total 1340
+drwxr-xr-x 2 root shell    4096 2009-01-01 00:00 SysuiDarkTheme
+-rw-r--r-- 1 root root  1367554 2009-01-01 00:00 framework-res__auto_generated_rro.apk
+
+/system/vendor/overlay/SysuiDarkTheme:
+total 8
+-rw-r--r-- 1 root root 6406 2009-01-01 00:00 SysuiDarkThemeOverlay.apk
