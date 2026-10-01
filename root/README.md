@@ -10,7 +10,7 @@ SoC：Allwinner B300 (`sun8iw15p1`) / Android 8.1 / 单槽分区 / 无 AVB、无
 | # | 改动 | 位置 |
 |---|---|---|
 | 1 | Magisk v28.1 root（patch boot.img 写入 `boot` 分区） | `/dev/block/by-name/boot` |
-| 2 | 全局系统字体 → MiSans，整个字重梯度上移一级（默认 400 = Medium） | Magisk 模块 `misans` |
+| 2 | 全局系统字体 → MiSans，整个字重梯度上移一级（默认 400 = Medium） | Magisk 模块 `misans`（生成脚本在 [`magisk/misans/`](../magisk/misans/)） |
 | 3 | 微信读书「京华老宋体」→ 方正筑紫明朝 | app 私有目录（非模块） |
 
 ## 关键原理
@@ -40,7 +40,7 @@ adb sideload work\restore_stock_signed.zip
 ### 换回系统字体
 
 删除或禁用 Magisk 模块 `misans`（Magisk app 里操作）→ 重启即恢复 Noto/Roboto。
-`backup/fonts_orig.xml` 是原厂 `/system/etc/fonts.xml`。
+`magisk/misans/fonts_orig.xml` 是原厂 `/system/etc/fonts.xml`。
 
 ### 还原微信读书字体
 
@@ -65,8 +65,6 @@ adb shell 'su -c "
 |---|---|
 | `backup/zzboot.img` | **原厂 boot 分区**（md5 `411ffe637dc3ca8972d88cd6bfbe3717`）—— 既是还原基准，也是还原包的原料 |
 | `backup/magisk_patched.img` | Magisk v28.1 补丁后的 boot（md5 `ea1f0277dd4c269f42c19ad826a00488`），刷进 boot 分区即为 root |
-| `backup/fonts_orig.xml` | 原厂 `/system/etc/fonts.xml` |
-| `build_misans_v2.py` | 生成 MiSans 字体模块（Magisk 可直接安装的 zip） |
 | `make-restore-zip.sh` | 生成「还原原厂 boot」的已签名刷机包 |
 | `toolkit/kernel_flashing_template.zip` | 刷机包模板：内含 recovery 认可的 `update-binary`、`otacert`、`metadata` |
 | `toolkit/restore-updater-script` | 还原包的 `updater-script`：把 `boot.img` 写回 boot 分区 |
@@ -77,7 +75,7 @@ adb shell 'su -c "
 
 | 要什么 | 怎么生成 |
 |---|---|
-| MiSans 字体模块 zip | `python3 build_misans_v2.py`。字体默认读 `root/fonts/`，可用 `SRC_TTF=` 指到别处；设备上现成有 6 个字重，`adb pull /data/adb/modules/misans/system/fonts/ fonts/` 即可（要 su） |
+| MiSans 字体模块 zip | `cd ../magisk/misans && python3 build_misans_v2.py`。字体默认读该目录下的 `fonts/`，可用 `SRC_TTF=` 指到别处；设备上现成有 6 个字重，`adb pull /data/adb/modules/misans/system/fonts/ fonts/` 即可（要 su） |
 | 还原原厂 boot 的刷机包 | `JAVA8=~/jdk8 ./make-restore-zip.sh` → `work/restore_stock_signed.zip`，然后 `adb sideload` |
 | 换回微信读书原字体 | 需要 `KingHwa_OldSong.ttf.orig`；那台机器上的已经被替换掉了，只能让微信读书自己重下字体后再 pull |
 

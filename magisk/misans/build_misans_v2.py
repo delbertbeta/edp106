@@ -1,8 +1,8 @@
 import os, shutil, zipfile, io
 
-B = os.path.dirname(os.path.abspath(__file__))   # this script lives in <repo>/root/
+B = os.path.dirname(os.path.abspath(__file__))   # this script lives in <repo>/magisk/misans/
 STAGE = os.path.join(B, "work", "module_misans_v2")
-# Where the MiSans .ttf files live. Default: root/fonts/ next to this script.
+# Where the MiSans .ttf files live. Default: fonts/ next to this script.
 # Override with SRC_TTF=/path/to/MiSans/ttf when they live elsewhere.
 SRC_TTF = os.environ.get("SRC_TTF") or os.path.join(B, "fonts")
 if not os.path.isdir(SRC_TTF):
@@ -27,7 +27,7 @@ shutil.rmtree(STAGE, ignore_errors=True)
 os.makedirs(os.path.join(STAGE, "system", "fonts"))
 os.makedirs(os.path.join(STAGE, "system", "etc"))
 
-src = io.open(os.path.join(B, "backup", "fonts_orig.xml"), encoding="utf-8").read()
+src = io.open(os.path.join(B, "fonts_orig.xml"), encoding="utf-8").read()
 anchor = '    <family name="sans-serif">\n'
 assert src.count(anchor) == 1
 
