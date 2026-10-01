@@ -1,0 +1,6 @@
+id=blem3map
+name=BLE-M3 翻页器按键重映射
+version=1.0
+versionCode=1
+author=delbert
+description=把 BLE-M3 翻页器（模拟鼠标的那只）翻译成标准键盘：上/下=PageUp/PageDown，左/右=DPAD_LEFT/RIGHT，中键=点屏幕中心，底部键=Back。独占抓取该设备（它就不再是鼠标了）。在 Magisk 里禁用本模块，或 pkill -x blem3map，即可回滚。
