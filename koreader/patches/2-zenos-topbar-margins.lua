@@ -7,6 +7,11 @@
 --   Zen Settings > Reader > Top status bar > Margins
 --   Zen Settings > Reader > Bottom status bar > Horizontal margin
 --
+-- ZenOS 4.x added "Align status bars with book margins", which drives the same
+-- margins as this patch does and wins over them. This patch is the owner of
+-- those margins, so while it is installed it forces that feature off
+-- (isMarginAlignmentEnabled) and removes its Reader settings toggle.
+--
 -- The patch lives outside zenos.koplugin, so a normal ZenOS update does not
 -- overwrite it. It patches the ZenOS module while Lua loads it and deliberately
 -- fails loudly in KOReader's log if a future ZenOS release changes the relevant
@@ -28,6 +33,7 @@ local DEFAULT_BOTTOM_HORIZONTAL = 10
 local TOPBAR_MODULE = "modules/reader/patches/reader_top_status_bar"
 local FOOTER_MODULE = "modules/reader/patches/reader_footer"
 local SETTINGS_MODULE = "modules/settings/sections/reader_settings"
+local STATUS_BAR_MODULE = "common/reader_status_bar"
 
 local function is_file(path)
     local file = io.open(path, "rb")
@@ -66,24 +72,6 @@ local function replace_once(source, old, new, label)
     return source:sub(1, start_at - 1) .. new .. source:sub(end_at + 1)
 end
 
-local function replace_all_plain(source, old, new)
-    local count = 0
-    local from = 1
-    local chunks = {}
-    while true do
-        local start_at, end_at = source:find(old, from, true)
-        if not start_at then
-            chunks[#chunks + 1] = source:sub(from)
-            break
-        end
-        chunks[#chunks + 1] = source:sub(from, start_at - 1)
-        chunks[#chunks + 1] = new
-        count = count + 1
-        from = end_at + 1
-    end
-    return table.concat(chunks), count
-end
-
 local function patch_topbar_source(source)
     local err
     source, err = replace_once(source,
@@ -97,44 +85,21 @@ local function patch_topbar_source(source)
         "top-bar margin declarations")
     if not source then return nil, err end
 
-    -- Both sides reserve the bookmark/dogear inset. This keeps the visible
-    -- content symmetric even though the dogear itself only appears on one side.
-    local old_left_stable = "        local left_pad = left_has and h_pad or 0"
-    local old_left_new = "        local left_pad = left_has and h_pad + right_inset or 0"
-    if source:find(old_left_stable, 1, true) then
-        source, err = replace_once(source, old_left_stable,
-            "        local left_pad = left_has and h_pad + right_inset or 0",
-            "left margin calculation")
-        if not source then return nil, err end
-    elseif not source:find(old_left_new, 1, true) then
-        return nil, "cannot find a supported left margin calculation"
-    end
-
+    -- The bookmark/dogear inset is reserved on both sides. The right side uses
+    -- its own setting so the two margins can differ; the left side keeps h_pad.
     source, err = replace_once(source,
-        "        local right_pad = right_has and h_pad + right_inset or 0",
-        "        local right_pad = right_has and right_h_pad + right_inset or 0",
-        "right margin calculation")
+        "        right_pad = math.max(right_pad, right_inset > 0 and right_inset + h_pad or 0)",
+        "        right_pad = math.max(right_pad, right_inset > 0 and right_inset + right_h_pad or 0)",
+        "dogear right margin reservation")
     if not source then return nil, err end
 
-    -- ZenOS <= 3.3.x calculated left_pad correctly but still painted the left
-    -- span with h_pad. Newer releases already use left_pad here.
-    local left_span_count
-    source, left_span_count = replace_all_plain(source,
-        "HorizontalSpan:new{ width = h_pad }",
-        "HorizontalSpan:new{ width = left_pad }")
-    if left_span_count == 0
-            and not source:find("HorizontalSpan:new{ width = left_pad }", 1, true) then
-        return nil, "cannot find a supported left margin span"
-    end
-
-    local left_region_count
-    source, left_region_count = replace_all_plain(source,
-        "local left_content_w = math.min(screen_width, h_pad + left_grp:getSize().w)",
-        "local left_content_w = math.min(screen_width, left_pad + left_grp:getSize().w)")
-    if left_region_count == 0
-            and not source:find("left_pad + left_grp:getSize().w", 1, true) then
-        return nil, "cannot find a supported left refresh region"
-    end
+    source, err = replace_once(source,
+        "            left_pad = left_has and h_pad + right_inset or 0\n"
+            .. "            right_pad = right_has and h_pad + right_inset or 0",
+        "            left_pad = left_has and h_pad + right_inset or 0\n"
+            .. "            right_pad = right_has and right_h_pad + right_inset or 0",
+        "status-bar margin calculation")
+    if not source then return nil, err end
 
     -- When the configured top margin grows, reserve the same extra height in
     -- paged reflowable documents so the first line cannot move under the bar.
@@ -274,6 +239,19 @@ local function wrap_reader_settings(module)
     module.build = function(ctx)
         local items = original_build(ctx)
         local gettext = require("gettext")
+
+        -- ZenOS 4.x's book-margin alignment is forced off by the loader above,
+        -- so its toggle would only lie about what the bars do. Hide it, and
+        -- tolerate its absence in case a future ZenOS drops the feature.
+        local align_text = gettext("Align status bars with book margins")
+        if type(items) == "table" then
+            for i = #items, 1, -1 do
+                if type(items[i]) == "table" and items[i].text == align_text then
+                    table.remove(items, i)
+                end
+            end
+        end
+
         -- Reader settings currently builds Top status bar first. Validate both
         -- its position and label so a future ZenOS reorder fails explicitly
         -- instead of inserting these controls into an unrelated submenu.
@@ -342,6 +320,20 @@ local interceptors = {
                 refresh_bottom_footer()
                 return result
             end
+        end
+    end,
+    [STATUS_BAR_MODULE] = function(chunk, path)
+        local compiled, compile_err = loadstring(chunk, "@" .. path)
+        if not compiled then error(compile_err) end
+        return function(...)
+            local module = compiled(...)
+            if type(module) ~= "table" then
+                error("ZenOS status-bar margins: unsupported reader status bar module")
+            end
+            -- One gate for the whole feature: the top bar reads it as
+            -- align_margins and the footer calls it from book_margin_width().
+            module.isMarginAlignmentEnabled = function() return false end
+            return module
         end
     end,
     [SETTINGS_MODULE] = function(chunk, path)
