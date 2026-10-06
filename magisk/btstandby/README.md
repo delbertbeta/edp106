@@ -59,8 +59,8 @@ app/                     PAN 重连 app（平台签名，装到 /system/priv-app
 module/
   module.prop
   service.sh             Magisk late_start：拉起 watch.sh 单实例
-  watch.sh               熄屏关 / 亮屏开 + 广播触发 app 重连
-                          （WiFi 开着时跳过重连 —— 两者抢同一个 2.4G 前端）
+  watch.sh               熄屏关 / 亮屏开；`maybe_reconnect_pan()` 在亮屏和开机各试一次
+                          （蓝牙开着 + WiFi 关着才连 —— 两者抢同一个 2.4G 前端）
   uninstall.sh
 make-module.sh           编译 app + 打包 zip
 check.sh                 设备侧端到端自检
@@ -71,8 +71,8 @@ check.sh                 设备侧端到端自检
 | 触发屏亮/屏灭 | `logcat -b events -T 1 -s screen_toggled:I`。**`-T 1` 不能省**：不加的话 logcat 会先把缓冲区里积压的历史事件整批吐出来，旧事件被当成刚发生的（实测一启动就 off→on→off 连发三次） |
 | 开关蓝牙 | root 下 `svc bluetooth` |
 | 记住熄屏前状态 | 熄屏时存 `settings get global bluetooth_on` 到 `.state`，只恢复**本模块关掉的**那一份 |
-| PAN 重连 | 亮屏后 `am broadcast` 给 app，app 按 NAP 过滤后 `BluetoothPan.connect()` |
-| WiFi 闸门 | **`wifi_on=1` 就跳过 PAN 重连**。BCM43436 是组合芯片，2.4G 前端共用；实测 PAN 连着时 WiFi 扫描回来 0 个 AP（RSSI -127），PAN 会把 WiFi 挤掉 |
+| PAN 重连 | `maybe_reconnect_pan()`：**蓝牙开着 + WiFi 关着**就连。亮屏时调（恢复蓝牙之后）、**开机也调** —— 开机那次 `screen_toggled:1` 会走到 `nothing to restore` 直接 return，所以必须在启动时自己调一次，不能只靠亮屏事件 |
+| WiFi 闸门 | WiFi 开着就跳过 PAN 重连。BCM43436 是组合芯片，2.4G 前端共用；实测 PAN 连着时 WiFi 扫描回来 0 个 AP（RSSI -127），PAN 会把 WiFi 挤掉 |
 
 两个坑：**开机要清 `.state`**（否则会把用户自己关掉的蓝牙又打开）；
 **停止要用 PID 文件 + `kill -9 -<pgid>`**，不能用 `pkill -f`（模式会匹配到调用者自己的
@@ -105,8 +105,10 @@ adb logcat -s BtPanStby
 
 ```
 10-06 23:14:31 === started (bluetooth_on=1) ===
+10-06 23:14:31 pan -> wifi is on, skip              ← 开机先试一次
 10-06 23:14:37 screen off -> bluetooth off
 10-06 23:14:44 screen on -> bluetooth restored
+10-06 23:14:44 pan -> asked app to reconnect (bt on, wifi off)
 I/BtPanStby: 跳过 <翻页器 MAC> BLE-M3（无 NAP）
 I/BtPanStby: 发起连接 <手机 MAC> -> true
 D/BluetoothPanServiceJni: connectPanNative(L193): in

@@ -8,7 +8,11 @@
 #       一行（会被 -s 过滤掉）然后开始跟随，既不重放，也没有 -d/-c 的竞态和副作用。
 # 开关：root 下调 svc bluetooth（实测无 SecurityException）。
 # 记忆：熄屏前把 settings global bluetooth_on 存进 .state，只恢复「本模块自己关掉的」。
-#       PAN 重连前先看 wifi_on：WiFi 开着就跳过，两者抢同一个 2.4G 前端。
+#
+# PAN 重连走 maybe_reconnect_pan()：**蓝牙开着 + WiFi 关着**就连。
+#   亮屏时调（恢复蓝牙之后）、开机也调（所以重启后不再需要手动勾）——
+#   开机那次 screen_toggled:1 会走到 "nothing to restore" 直接 return，
+#   所以必须在启动时自己调一次，不能只靠亮屏事件。
 
 MODDIR=${0%/*}
 PIDF="$MODDIR/.pid"
@@ -19,6 +23,28 @@ echo $$ >"$PIDF"
 trap 'rm -f "$PIDF"' EXIT
 
 log() { echo "$(date '+%m-%d %H:%M:%S') $*" >>"$LOGF"; }
+
+# 蓝牙开着 + WiFi 关着才连 PAN。
+# WiFi 开着就**不碰 PAN**：BCM43436 是组合芯片，2.4G 前端共用。
+# 实测 PAN 连着的时候 WiFi 扫描回来 0 个 AP（RSSI -127），PAN 会把它挤掉。
+maybe_reconnect_pan() {
+    if [ "$(settings get global bluetooth_on 2>/dev/null)" != 1 ]; then
+        log "pan -> bluetooth is off, skip"
+        return
+    fi
+    if [ "$(settings get global wifi_on 2>/dev/null)" = 1 ]; then
+        log "pan -> wifi is on, skip"
+        return
+    fi
+
+    # PAN 不会自己回来（AOSP 里 PAN 的 isAutoConnectable=false，实测重开蓝牙后
+    # PanService 起来、代理连上，但没有任何一处调 connect()）。交给 app 去连。
+    # --include-stopped-packages：app 没有 Activity，可能一直处于 stopped 状态。
+    am broadcast --include-stopped-packages \
+        -a com.delbert.btpan.RECONNECT -n com.delbert.btpan/.PanConnectReceiver \
+        >/dev/null 2>&1
+    log "pan -> asked app to reconnect (bt on, wifi off)"
+}
 
 screen_off() {
     prev=$(settings get global bluetooth_on 2>/dev/null)
@@ -32,31 +58,17 @@ screen_off() {
 }
 
 screen_on() {
-    if [ "$(cat "$STATE" 2>/dev/null)" != 1 ]; then
+    if [ "$(cat "$STATE" 2>/dev/null)" = 1 ]; then
+        svc bluetooth enable
+        log "screen on -> bluetooth restored"
+    else
         log "screen on -> nothing to restore"
-        return
     fi
-
-    svc bluetooth enable
-    log "screen on -> bluetooth restored"
-
-    # WiFi 开着就**不碰 PAN**：BCM43436 是组合芯片，2.4G 前端共用。
-    # 实测 PAN 连着的时候 WiFi 扫描回来 0 个 AP（RSSI -127），PAN 会把它挤掉。
-    if [ "$(settings get global wifi_on 2>/dev/null)" = 1 ]; then
-        log "screen on -> wifi is on, skip PAN reconnect"
-        return
-    fi
-
-    # PAN 不会自己回来（AOSP 里 PAN 的 isAutoConnectable=false，实测重开蓝牙后
-    # PanService 起来、代理连上，但没有任何一处调 connect()）。交给 app 去连。
-    # --include-stopped-packages：app 没有 Activity，可能一直处于 stopped 状态。
-    am broadcast --include-stopped-packages \
-        -a com.delbert.btpan.RECONNECT -n com.delbert.btpan/.PanConnectReceiver \
-        >/dev/null 2>&1
-    log "screen on -> asked app to reconnect PAN (wifi off)"
+    maybe_reconnect_pan
 }
 
 log "=== started (bluetooth_on=$(settings get global bluetooth_on 2>/dev/null)) ==="
+maybe_reconnect_pan      # 开机也连：重启后不用再手动勾
 
 # logcat 退出（被杀 / 缓冲区异常）就 2 秒后重来，保证守护进程不会静默死掉
 while true; do

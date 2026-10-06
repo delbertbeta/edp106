@@ -19,9 +19,9 @@ stopit; rm -f "$M/.state" "$L"
 logcat -c
 setsid "$M/watch.sh" >/dev/null 2>&1 & sleep 2
 
-echo "[1] 启动后不该有动作"
+echo "[1] 启动后不该有切屏动作（但开机会主动试一次 PAN）"
 chk bt "$(BT)" 1
-chk 日志行数 "$(wc -l <"$L")" 1
+chk "无 screen off" "$(grep -c 'screen off' "$L")" 0
 
 echo "[2] 熄屏 -> 关蓝牙"
 input keyevent 26; sleep 7
@@ -30,6 +30,9 @@ chk bt "$(BT)" 0
 echo "[3] 亮屏 -> 开蓝牙 + 触发 PAN 重连"
 input keyevent 26; sleep 18
 chk bt "$(BT)" 1
+# 刚启动时已经试过一次，这里只要求亮屏也再试一次
+echo "  --- watch 侧 ---"
+grep -E "pan ->|screen on" "$L" | tail -4 | sed 's/^/  /'
 echo "  --- app 侧日志 ---"
 logcat -d -b all -v time | grep -E "BtPanStby|connectPanNative" | tail -6 | sed 's/^/  /'
 
