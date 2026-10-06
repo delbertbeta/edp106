@@ -1,0 +1,6 @@
+id=btstandby
+name=蓝牙随屏开关
+version=1.0
+versionCode=1
+author=delbert
+description=熄屏自动关蓝牙，亮屏按熄屏前的状态恢复（行为同 WiFi：熄屏即关）。只动蓝牙，不碰 WiFi；只恢复本模块自己关掉的蓝牙，不影响你手动开关。日志见 /data/local/tmp/btstandby.log。在 Magisk 里禁用本模块（或删掉目录）重启即回滚。
