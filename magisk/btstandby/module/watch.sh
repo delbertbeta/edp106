@@ -27,14 +27,15 @@ log() { echo "$(date '+%m-%d %H:%M:%S') $*" >>"$LOGF"; }
 # 蓝牙开着 + WiFi 关着才连 PAN。
 # WiFi 开着就**不碰 PAN**：BCM43436 是组合芯片，2.4G 前端共用。
 # 实测 PAN 连着的时候 WiFi 扫描回来 0 个 AP（RSSI -127），PAN 会把它挤掉。
+# 返回 0 = 真的把广播发出去了；非 0 = 被条件挡下（调用方据此决定要不要重试）。
 maybe_reconnect_pan() {
     if [ "$(settings get global bluetooth_on 2>/dev/null)" != 1 ]; then
         log "pan -> bluetooth is off, skip"
-        return
+        return 2
     fi
     if [ "$(settings get global wifi_on 2>/dev/null)" = 1 ]; then
         log "pan -> wifi is on, skip"
-        return
+        return 3
     fi
 
     # PAN 不会自己回来（AOSP 里 PAN 的 isAutoConnectable=false，实测重开蓝牙后
@@ -44,6 +45,13 @@ maybe_reconnect_pan() {
         -a com.delbert.btpan.RECONNECT -n com.delbert.btpan/.PanConnectReceiver \
         >/dev/null 2>&1
     log "pan -> asked app to reconnect (bt on, wifi off)"
+    return 0
+}
+
+pan_connected() {
+    dumpsys bluetooth_manager 2>/dev/null \
+        | sed -n '/mPanDevices/,/^Profile:/p' \
+        | grep -qE '([0-9A-Fa-f]{2}:){5}'
 }
 
 screen_off() {
@@ -68,7 +76,19 @@ screen_on() {
 }
 
 log "=== started (bluetooth_on=$(settings get global bluetooth_on 2>/dev/null)) ==="
-maybe_reconnect_pan      # 开机也连：重启后不用再手动勾
+
+# 开机也连：重启后不用再手动勾。
+# 但开机早期蓝牙栈和 app 都还没就绪（实测开机 +8s 发广播，没人接），所以重试。
+# 注意区分两种“跳过”：蓝牙没起来（rc=2）是瞬时状态，要重试；
+# WiFi 开着（rc=3）是政策上就不连，直接放弃，不空转。
+n=0
+while [ "$n" -lt 6 ]; do
+    maybe_reconnect_pan
+    [ $? = 3 ] && break
+    pan_connected && break
+    n=$((n + 1))
+    [ "$n" -lt 6 ] && sleep 15
+done
 
 # logcat 退出（被杀 / 缓冲区异常）就 2 秒后重来，保证守护进程不会静默死掉
 while true; do
