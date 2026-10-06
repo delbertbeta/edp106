@@ -14,7 +14,7 @@
 |---|---|---|
 | `navbar/` | 用 `TYPE_NAVIGATION_BAR` 窗口把 ROM 删掉的导航栏补回来；`/data` 侧安装，不碰 `/system` | [`navbar/README.md`](navbar/README.md) |
 | `root/` | Magisk v28.1 root（patch boot.img）；含还原原厂 boot 的已签名刷机包 | [`root/README.md`](root/README.md) |
-| `magisk/` | Magisk 模块的源码 / 生成脚本：MiSans 全系统字体、BLE-M3 翻页器按键重映射 | [`magisk/README.md`](magisk/README.md) |
+| `magisk/` | Magisk 模块的源码 / 生成脚本：MiSans 全系统字体、BLE-M3 翻页器按键重映射、蓝牙 PAN（互联网连接） | [`magisk/README.md`](magisk/README.md) |
 | `baseline/` | 改造前的设备状态快照，以及原厂文件的 md5 还原基准 | [`baseline/README.md`](baseline/README.md) |
 | `koreader/` | 自己写的 KOReader 扩展：墨水屏全刷、TXT 章节标题识别、ZenOS 状态栏边距 patch、标题样式 | [`koreader/README.md`](koreader/README.md) |
 
