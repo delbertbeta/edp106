@@ -71,7 +71,8 @@ check.sh                 设备侧端到端自检
 | 触发屏亮/屏灭 | `logcat -b events -T 1 -s screen_toggled:I`。**`-T 1` 不能省**：不加的话 logcat 会先把缓冲区里积压的历史事件整批吐出来，旧事件被当成刚发生的（实测一启动就 off→on→off 连发三次） |
 | 开关蓝牙 | root 下 `svc bluetooth` |
 | 记住熄屏前状态 | 熄屏时存 `settings get global bluetooth_on` 到 `.state`，只恢复**本模块关掉的**那一份 |
-| PAN 重连 | `maybe_reconnect_pan()`：**蓝牙开着 + WiFi 关着**就连。亮屏时调（恢复蓝牙之后）、**开机也调** —— 开机那次 `screen_toggled:1` 会走到 `nothing to restore` 直接 return，所以必须在启动时自己调一次，不能只靠亮屏事件 |
+| PAN 重连 | `maybe_reconnect_pan()`：**蓝牙开着 + WiFi 关着**就连。外面包一层 `reconnect_pan_retry()`，亮屏和开机都调 |
+| 为什么要重试 | `svc bluetooth enable` 是**异步**的，`settings get global bluetooth_on` 要十几秒才翻成 1。只调一次的话会读到没翻转的 0，被当成“蓝牙没开”跳过 —— 这就是 PAN 不重连的真正原因。重试里区分两种跳过：`rc=2`（栈还没起来）继续等，`rc=3`（WiFi 开着）直接放弃 |
 | WiFi 闸门 | WiFi 开着就跳过 PAN 重连。BCM43436 是组合芯片，2.4G 前端共用；实测 PAN 连着时 WiFi 扫描回来 0 个 AP（RSSI -127），PAN 会把 WiFi 挤掉 |
 
 两个坑：**开机要清 `.state`**（否则会把用户自己关掉的蓝牙又打开）；
@@ -104,16 +105,20 @@ adb logcat -s BtPanStby
 期望：
 
 ```
-10-06 23:14:31 === started (bluetooth_on=1) ===
-10-06 23:14:31 pan -> wifi is on, skip              ← 开机先试一次
-10-06 23:14:37 screen off -> bluetooth off
-10-06 23:14:44 screen on -> bluetooth restored
-10-06 23:14:44 pan -> asked app to reconnect (bt on, wifi off)
+10-06 23:49:03 === started (bluetooth_on=) ===
+10-06 23:49:03 pan -> bluetooth is off, skip            ← 开机时栈还没起来
+10-06 23:49:34 pan -> asked app to reconnect (bt on, wifi off)
+10-06 23:53:47 screen off -> bluetooth off
+10-06 23:59:40 screen on -> bluetooth restored
+10-06 23:59:40 pan -> bluetooth is off, skip             ← svc enable 是异步的，settings 还没翻过来
+10-06 23:59:45 pan -> asked app to reconnect (bt on, wifi off)
 I/BtPanStby: 跳过 <翻页器 MAC> BLE-M3（无 NAP）
 I/BtPanStby: 发起连接 <手机 MAC> -> true
 D/BluetoothPanServiceJni: connectPanNative(L193): in
 D/PanService: LOCAL_PANU_ROLE:REMOTE_NAP_ROLE state = 1
 ```
+
+那两行 `bluetooth is off, skip` **不是错误**，是重试机制在工作 —— 见下。
 
 `check.sh` 实测 7/7 通过。
 

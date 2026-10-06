@@ -54,6 +54,21 @@ pan_connected() {
         | grep -qE '([0-9A-Fa-f]{2}:){5}'
 }
 
+# 重试到连上为止。
+# 为什么必须重试：svc bluetooth enable 是异步的，settings 里的 bluetooth_on 要十几秒后才翻成 1。
+# 亮屏后立刻调一次的话，会读到还没翻过来的 0，直接被当作“蓝牙没开”跳过（实测就是这个 bug）。
+# rc=3（WiFi 开着）是政策上不连，直接放弃；rc=2（蓝牙还没起来）是瞬时状态，等下一轮。
+reconnect_pan_retry() {
+    n=0
+    while [ "$n" -lt 8 ]; do
+        maybe_reconnect_pan
+        [ $? = 3 ] && break
+        pan_connected && break
+        n=$((n + 1))
+        [ "$n" -lt 8 ] && sleep 5
+    done
+}
+
 screen_off() {
     prev=$(settings get global bluetooth_on 2>/dev/null)
     echo "$prev" >"$STATE"
@@ -69,26 +84,17 @@ screen_on() {
     if [ "$(cat "$STATE" 2>/dev/null)" = 1 ]; then
         svc bluetooth enable
         log "screen on -> bluetooth restored"
+        reconnect_pan_retry
     else
         log "screen on -> nothing to restore"
+        maybe_reconnect_pan
     fi
-    maybe_reconnect_pan
 }
 
 log "=== started (bluetooth_on=$(settings get global bluetooth_on 2>/dev/null)) ==="
 
-# 开机也连：重启后不用再手动勾。
-# 但开机早期蓝牙栈和 app 都还没就绪（实测开机 +8s 发广播，没人接），所以重试。
-# 注意区分两种“跳过”：蓝牙没起来（rc=2）是瞬时状态，要重试；
-# WiFi 开着（rc=3）是政策上就不连，直接放弃，不空转。
-n=0
-while [ "$n" -lt 6 ]; do
-    maybe_reconnect_pan
-    [ $? = 3 ] && break
-    pan_connected && break
-    n=$((n + 1))
-    [ "$n" -lt 6 ] && sleep 15
-done
+# 开机也连：重启后不用再手动勾。开机早期蓝牙栈和 app 都还没就绪，同样靠重试。
+reconnect_pan_retry
 
 # logcat 退出（被杀 / 缓冲区异常）就 2 秒后重来，保证守护进程不会静默死掉
 while true; do
