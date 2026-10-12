@@ -35,3 +35,13 @@
 
 临时产物一律丢 `tmp/`（已在 `.gitignore` 里）：截图、抓包、下载物、监视脚本等，
 **不要新增顶层目录**。
+
+## 在 WSL 里用 adb
+
+USB 没用 `usbipd` 透传进 WSL 的话，adb server 由 Windows 起，WSL 里指过去就行：
+
+```sh
+export ADB_SERVER_SOCKET=tcp:127.0.0.1:5037
+```
+
+（重启 server 在 Windows 侧做，别在 WSL 里 `adb kill-server`。）
