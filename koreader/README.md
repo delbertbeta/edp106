@@ -10,7 +10,7 @@ styletweaks/  Stylesheet（Style tweaks）
 
 | 路径 | 干什么的 |
 |---|---|
-| `patches/2-zenos-topbar-margins.lua` | 给 ZenOS 的阅读状态栏加边距设置（Zen Settings → Reader → Top/Bottom status bar）。它**故意放在 `zenos.koplugin` 外面**，这样升级 ZenOS 不会把它覆盖掉；ZenOS 改了相关源码结构时它会往日志里报错，而不是静默失效。ZenOS 4.x 的 **Align status bars with book margins** 抢的是同一组边距，所以装了 patch 之后那个功能被强制关掉（`isMarginAlignmentEnabled` 恒为 false），菜单入口也一并删掉 |
+| `patches/2-zenos-topbar-margins.lua` | 给 ZenOS 的阅读状态栏加边距设置（Zen Settings → Reader → Top/Bottom status bar）。它**故意放在 `zenos.koplugin` 外面**，这样升级 ZenOS 不会把它覆盖掉；ZenOS 改了相关源码结构时它会往日志里报错，而不是静默失效。ZenOS 4.x 的 **Align status bars with book margins** 抢的是同一组边距，所以装了 patch 之后那个功能被强制关掉（`isMarginAlignmentEnabled` 恒为 false），菜单入口也一并删掉。**横向**边距不改源码文字，而是接管 `common/reader_status_bar.getHorizontalMargins`（顶部栏和底部栏都从这里读边距，而 ZenOS 给左右两边传的是同一个 fallback，右边距本来只能跟着左边距走）；只有顶部栏的**纵向**留白还挂着源码锚点 |
 | `patches/2-android-net-connected.lua` | 让 KOReader 认得出**蓝牙 PAN / VPN** 这类非 Wi-Fi 网络，不再显示"未连接"。见下面「为什么蓝牙/VPN 会显示未连接」 |
 | `plugins/totalfresh.koplugin/` | 墨水屏全刷。KOReader 自带的 Full refresh rate 在这台机器上不生效——它的 Android launcher 认不出这块屏的控制器，`Screen:refreshFull()` 只做一次普通 blit、不闪。插件自己数翻页，翻到 1/5/10/20 次时通过窗口管理器直接触发 GC16 全刷；刷新波形仍交给系统设置，插件不碰。**依赖这块屏，换设备没意义** |
 | `plugins/txtoutline.koplugin/` | TXT 章节标题识别 → 多级目录；GB2312/GBK/GB18030 自动转码（借系统 ICU，不内置码表），见它自己的 [`README.md`](plugins/txtoutline.koplugin/README.md) |
@@ -30,12 +30,18 @@ adb push styletweaks/heading_left_bar.css   /sdcard/koreader/styletweaks/
 
 推完要**完全退出**再重启 KOReader（从最近任务里划掉，不是回主页）。
 
+坏了怎么看出来 —— 只要 patch 有任何一步没对上，顶部状态栏会整个消失，KOReader 日志里同时会出现 `ZenOS top-bar margins` / `Patching failed` / `reader patch module missing`：
+
+```sh
+adb logcat -d | grep -aE "ZenOS top-bar margins|Patching failed|reader patch module missing"
+```
+
 ## 环境
 
 | | 版本 |
 |---|---|
 | KOReader（`org.koreader.launcher`） | v2026.07.2 |
-| ZenOS | v4.0.1 —— `patches/2-zenos-topbar-margins.lua` 挂的就是它，内部模块结构一变 patch 就会在日志里报错（v4 重写过 `reader_top_status_bar.lua`，patch 的锚点已按 v4.0.1 对齐，不再兼容 ≤ 3.3.x） |
+| ZenOS | v4.1.0 —— `patches/2-zenos-topbar-margins.lua` 挂的就是它。4.1.0 重写了 `reader_top_status_bar.lua` 的边距算法（`h_pad` 从 `Screen:scaleBySize(10)` 改成 `Size.span.horizontal_default`，并删掉了「不对齐书籍边距时重算 left/right pad」那段），旧锚点全部失效、顶部状态栏整个不加载；patch 已改成接管 `getHorizontalMargins`，只剩顶部纵向留白一个锚点。它**只认 ZenOS ≥ 4.1.0**：4.0.1 会在 `getHorizontalMargins` 返回后再把两个 pad 盖掉，patch 会在日志里明确拒绝，而不是半死不活 |
 | SimpleUI | 由 ZenOS 带进来，跟这里的东西没有直接关系 |
 
 ## 为什么蓝牙/VPN 会显示未连接

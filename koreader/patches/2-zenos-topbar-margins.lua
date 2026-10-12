@@ -12,10 +12,17 @@
 -- those margins, so while it is installed it forces that feature off
 -- (isMarginAlignmentEnabled) and removes its Reader settings toggle.
 --
+-- The horizontal margins are not read off the top bar's source any more. Both
+-- bars take them from common/reader_status_bar.getHorizontalMargins(), and
+-- ZenOS passes one fallback in for both sides, so the right margin could only
+-- follow the left one; that module is hooked instead. Only the top bar's
+-- vertical padding is still patched as source text (see patch_topbar_source).
+--
 -- The patch lives outside zenos.koplugin, so a normal ZenOS update does not
 -- overwrite it. It patches the ZenOS module while Lua loads it and deliberately
 -- fails loudly in KOReader's log if a future ZenOS release changes the relevant
--- source structure.
+-- source structure. Requires ZenOS >= 4.1.0: 4.0.1 and older overwrite both
+-- pads after getHorizontalMargins() returns, which would ignore the hook.
 
 local logger = require("logger")
 
@@ -74,31 +81,19 @@ end
 
 local function patch_topbar_source(source)
     local err
+    -- 4.0.1 and older overwrite both pads right after getHorizontalMargins()
+    -- returns, so the common/reader_status_bar hook below would be ignored
+    -- without an error. Refuse those versions instead of half-working.
+    if source:find("            left_pad = left_has and h_pad + right_inset or 0", 1, true) then
+        return nil, "this reader_top_status_bar is from ZenOS 4.0.1 or older"
+    end
+
+    -- Vertical top margin: ZenOS hardcodes Size.padding.small.
     source, err = replace_once(source,
-        "        local top_pad = Size.padding.small\n        local h_pad   = Screen:scaleBySize(10)",
+        "        local top_pad = Size.padding.small",
         "        local top_pad = Screen:scaleBySize(\n"
-            .. "            G_reader_settings:readSetting(\"" .. SETTING_TOP .. "\", " .. DEFAULT_TOP .. "))\n"
-            .. "        local h_pad = Screen:scaleBySize(\n"
-            .. "            G_reader_settings:readSetting(\"" .. SETTING_LEFT .. "\", " .. DEFAULT_LEFT .. "))\n"
-            .. "        local right_h_pad = Screen:scaleBySize(\n"
-            .. "            G_reader_settings:readSetting(\"" .. SETTING_RIGHT .. "\", " .. DEFAULT_RIGHT .. "))",
-        "top-bar margin declarations")
-    if not source then return nil, err end
-
-    -- The bookmark/dogear inset is reserved on both sides. The right side uses
-    -- its own setting so the two margins can differ; the left side keeps h_pad.
-    source, err = replace_once(source,
-        "        right_pad = math.max(right_pad, right_inset > 0 and right_inset + h_pad or 0)",
-        "        right_pad = math.max(right_pad, right_inset > 0 and right_inset + right_h_pad or 0)",
-        "dogear right margin reservation")
-    if not source then return nil, err end
-
-    source, err = replace_once(source,
-        "            left_pad = left_has and h_pad + right_inset or 0\n"
-            .. "            right_pad = right_has and h_pad + right_inset or 0",
-        "            left_pad = left_has and h_pad + right_inset or 0\n"
-            .. "            right_pad = right_has and right_h_pad + right_inset or 0",
-        "status-bar margin calculation")
+            .. "            G_reader_settings:readSetting(\"" .. SETTING_TOP .. "\", " .. DEFAULT_TOP .. "))",
+        "top-bar top margin declaration")
     if not source then return nil, err end
 
     -- When the configured top margin grows, reserve the same extra height in
@@ -333,6 +328,23 @@ local interceptors = {
             -- One gate for the whole feature: the top bar reads it as
             -- align_margins and the footer calls it from book_margin_width().
             module.isMarginAlignmentEnabled = function() return false end
+
+            -- Both status bars read their horizontal margins from here, and
+            -- the callers hand in one fallback for both sides. With alignment
+            -- forced off that fallback is all either bar gets, so this is the
+            -- only place the left and right settings can differ.
+            local original_get_horizontal_margins = module.getHorizontalMargins
+            if type(original_get_horizontal_margins) ~= "function" then
+                error("ZenOS status-bar margins: reader status bar module has no getHorizontalMargins")
+            end
+            module.getHorizontalMargins = function(document, fallback, plugin)
+                if module.isMarginAlignmentEnabled(plugin) then
+                    return original_get_horizontal_margins(document, fallback, plugin)
+                end
+                local Screen = require("device").screen
+                return Screen:scaleBySize(read_margin(SETTING_LEFT, DEFAULT_LEFT)),
+                    Screen:scaleBySize(read_margin(SETTING_RIGHT, DEFAULT_RIGHT))
+            end
             return module
         end
     end,
